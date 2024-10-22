@@ -1,0 +1,151 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#piedetexto {
+    text-align: center;
+    font-size: 12px;
+} 
+   
+#titulo  {
+    width: 70%;
+    color: #333;
+    margin-left:20%;
+    margin-right: 20%;
+
+} 
+
+#subtitulo  {
+   
+    color: #606060;
+    align-content: center;
+    width: 70%;
+    margin-left:20%;
+    margin-right: 20%;
+    text-align: center;
+} 
+
+#fotogrande{
+    width: 100%;
+
+
+} 
+
+#titulo h1{
+    
+    font-size: 60px;
+    font-family:'Times New Roman', Times, serif;
+    line-height:60px;
+    color: black;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+} 
+
+
+    .capitular-estilizada::first-letter {
+        font-size:7em;
+        float: left;
+        margin: 1%;
+        line-height: 0.8;
+        font-weight:bolder;
+        
+    }   
+header{
+        background-color: #000030;
+        padding: 1rem;
+        margin: 0;
+    }
+
+#arriba li{
+            display:inline-block;
+            width: 32%;
+            box-align: center;
+}
+            
+#arriba{ color: white;
+    text-decoration: none;
+    background-color: #000030;
+    text-align:center;
+   
+}
+
+
+.PAIS {
+    color: white;
+    text-align:start;
+}
+.thinkbig {
+    color: white;
+    text-align: center;
+}
+  
+.empresas {
+    color: #57e857; 
+    
+}   
+
+.PROYECTO {
+    color: white;
+    text-align:end;
+}
+
+ 
+body {
+    font-family:Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.enlaces {
+    font-weight: bold;
+    text-decoration: underline;
+color: black;
+}
+
+img{
+    width: 100%;
+}
+
+
+article{ 
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 150%;
+    padding-top: 5%;
+
+}
+
+
+
+#capitular::first-letter {
+    font-size: 30px;
+    float: left; 
+    line-height: 0.8px; 
+    margin-right: 0.1px;
+    font-weight: bold; 
+    color: #333; 
+}
+
+#capitular {
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+#h1 {
+    color: #333;
+}
+
+#amenaza, .solucion {
+    margin-bottom: 20px;
+    color: #444;
+}
+
