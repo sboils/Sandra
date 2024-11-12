@@ -69,10 +69,17 @@ header{
             box-align: center;
 }
             
-#arriba{ color: white;
+#arriba{ 
+    color: white;
     text-decoration: none;
     background-color: #000030;
     text-align:center;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+
    
 }
 
