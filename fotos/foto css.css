@@ -54,18 +54,18 @@ h1 {
     width: 100%;
 }
 
-@media screen and (max-width: 768px)
+
 
 img {
     height: auto;
     width: 60%;
-    
 }
 
 .content {
     flex: 1;
     padding: 20px;
     border-radius: 10px;
+
 }
 
 h2 {
