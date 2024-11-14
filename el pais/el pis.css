@@ -6,6 +6,12 @@
     display: flex;
     
 }
+
+.content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;}
+    
 #piedetexto {
     text-align: center;
     font-size: 12px;
