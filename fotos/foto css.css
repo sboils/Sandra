@@ -1,3 +1,7 @@
+
+
+*  {box-sizing: border-box;}
+
 body {
    background-color: #01071b;
     font-family: 'Montserrat', sans-serif;
@@ -15,13 +19,26 @@ h1 {
     width: 100%;}
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+   align-items: center;
     max-width: 1200px;
     padding: 20px;
-    box-sizing: border-box;
     width: 100% }
+
+
+
+    .gallery-item  {
+    
+        object-fit: cover;
+        transition: filter 0.5s ease;
+        filter: grayscale(0%);
+        width: 30%;
+        border: 4px solid white; 
+        box-sizing: border-box;}
+    
 
 .gallery-item img {
     height: auto;
