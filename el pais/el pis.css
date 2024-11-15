@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
     
     
 }
@@ -29,6 +31,8 @@
     margin-left:20%;
     margin-right: 20%;
     text-align: center;
+    justify-content:center;
+    align-items:center;
 } 
 
 #fotogrande{
@@ -64,6 +68,9 @@ header{
         background-color: #000030;
         padding: 1rem;
         margin: 0;
+        justify-content:center;
+         align-items:center;
+
     }
 
 #arriba li{
@@ -112,6 +119,8 @@ body {
     line-height: 1.6;
     margin: 0 auto;
     padding: 20px;
+    justify-content:center;
+    align-items:center;
 
 }
 
@@ -119,6 +128,7 @@ body {
     font-weight: bold;
     text-decoration: underline;
 color: black;
+
 }
 
 img{
