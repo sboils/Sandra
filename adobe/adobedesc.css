@@ -105,7 +105,7 @@ li {
 }
 
 
-.featured-image {
+.dreta {
     display: flex;
     flex-flow:column nowrap;
     justify-content: flex-end;
@@ -115,11 +115,15 @@ li {
 }
    
 
+.logos img{
+   max-width: 3%; 
+   height: auto;
+   border-bottom: #1d1d1d;
+  text-align: center;
+}
 
-
-
-.featured-image img {
-    max-width: 4%;
+.colores{
+    max-width: 30%;
     
 }
 
