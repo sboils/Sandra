@@ -2,6 +2,11 @@ body {
     font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
 }
 main{
     display: flex;
@@ -120,10 +125,15 @@ li {
    height: auto;
    border-bottom: #1d1d1d;
   text-align: center;
+
 }
 
 .colores{
     max-width: 30%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items:center;
     
 }
 
@@ -202,4 +212,8 @@ footer {
     color: #fff;
     padding: 30px;
     text-align: left;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
