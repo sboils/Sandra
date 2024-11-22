@@ -1,0 +1,82 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body {
+   background-color: #ffb4fc;
+    margin: 0;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.gallery div{
+    
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+    background-color: beige;
+}
+
+h3 {
+    text-align: center;
+    margin: 2%;
+    background-color: #044a39;
+    color: rgb(255, 255, 255);
+}
+
+.bubblegum-sans-regular {
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+
+
+.alegreya-uniquifier {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+}
+
+
+
+  .graduate-regular {
+    font-family: "Graduate", serif;
+    font-weight: 400;
+    font-style: normal;
+ 
+  }
+
+  .roboto-black {
+    font-family: "Roboto", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+  #especial {
+    font-size: large;
+    color: #16af89;
+
+    position: absolute;
+    top: 50%;
+
+  }
