@@ -1,0 +1,100 @@
+
+* {
+  box-sizing: border-box;
+}
+body{
+    font-family:Verdana;
+    color:#aaaaaa;
+}
+
+h1{
+    background-color:#e5e5e5;
+    padding:15px;
+    text-align:center;
+}
+ul {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+ul a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+
+.mains {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  background-color: #ffffff;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+footer{
+    background-color:#e5e5e5;
+    text-align:center;
+    padding:10px;
+    margin-top:7px;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  header, main, footer {
+    width: 100%;
+  }
+}
+
+/* iPhone 12  */
+@media only screen and (max-width: 390px) {
+    header {
+        float: none;
+        text-align: center;
+    }
+    main {
+        float: none;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    footer {
+        width: 100%;
+    }
+  
+}
+
+/* iPad Air */
+@media only screen and (min-width: 845px) and (max-width: 1180px) {
+    .body{
+        width: 50%;
+    }
+}
+
+
+/* Ordenador portátil */
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+  
+}
+
+/* Pantalla grande */
+@media only screen and (min-width: 1921px) {
+    body {
+        font-size: 20px;
+    }
+
+}
