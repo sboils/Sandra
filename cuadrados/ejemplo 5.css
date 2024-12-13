@@ -1,0 +1,47 @@
+
+
+div {
+  box-sizing: border-box;
+}
+#si {
+
+  height: 20vh;
+}
+
+#sc {
+  background-color: #ffc107;
+  height: 20vh;
+}
+
+#sd {
+
+  height: 20vh;
+}
+
+#izquierda {
+  background-color: #159e00;
+  height: 90vh;
+}
+#centro {
+  background-color: #f58300;
+  height: 90vh;
+}
+
+
+#derecha {
+  background-color: #366493;
+  height: 90vh;
+
+}
+
+#pie{
+  background-color: rgb(194, 90, 161);
+  height: 20vh;
+}
+
+@media (min-width: 768px) {
+  #galeria div {
+    width: 50%;
+    /* se aplica desde min-width desde 768px */
+  }
+}

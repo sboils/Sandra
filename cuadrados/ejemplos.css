@@ -1,0 +1,95 @@
+div {
+    box-sizing: border-box; /* para que los bordes, paddings estén en la anchura (determinada por col) */
+}
+nav {
+    background-color: aqua;
+}
+#galeria {
+    background-color: bisque;
+    display: flex; /* al ser col Boostrap ya le pone Flex */
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh; /* 80% altura pantalla */
+    overflow: auto;
+}        
+#galeria div {
+    background-color: darkgray;
+    width: 100%; /* se aplica desde min-width 0 hasta 768px */
+}        
+@media (min-width: 768px) {
+    #galeria div{
+        width: 50%;  /* se aplica desde min-width desde 768px */
+    }
+}        
+#img1 {
+    height: 300px;            
+}
+#img2 {
+    height: 100px;            
+}
+#img3 {
+    height: 200px;            
+}        
+#img4 {
+    height: 150px;
+}        
+#img5 {
+    height: 350px;            
+}        
+#img6 {
+    height: 100px;            
+}        
+footer {
+    height: 20vh; /* 20% altura pantalla */
+}
+footer div {
+    background-color: chartreuse;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .bg-primary {
+    background-color: #007bff ;
+    height: 90vh;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 ;
+    height: 90vh;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d !important;
+  }
+  
+
+  .text-dark {
+    color: #343a40 ;
+  }
+  
+  .text-white {
+    color: #ffffff ;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+   
+ 

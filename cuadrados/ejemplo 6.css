@@ -1,0 +1,36 @@
+
+div {
+  box-sizing: border-box;
+}
+
+
+#derecha {
+  background-color: #b5519b;
+  height: 90vh;
+}
+
+#inferior {
+  background-color: #159e00;
+  height: 10vh;
+}
+
+#superior {
+  background-color: #dc3545;
+  height: 20vh;
+}
+#izquierda {
+  background-color: #007bff;
+  height: 90vh;
+}
+
+
+#pie {
+  background-color: #855cb4;
+  height: 20vh;
+}
+
+
+@media (min-width: 768px) {
+  
+}
+
