@@ -1,0 +1,165 @@
+
+
+body {
+    background-color: rgb(253, 159, 159);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #373737;
+    font-weight: bold;
+
+}
+  
+.active {
+    color: #000000;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image{ 
+    width: 50%;
+    display: flex;
+    text-align: center;
+}
+ 
+
+main {
+    padding: 20px;
+}
+
+
+.galeria {
+    display: flex;
+    text-align: center;
+    
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen {
+    border-radius: 10px;
+   
+
+}
+
+
+.video video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4e0404;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 20%;
+  }
+  
+  .learn-more:hover {
+    background-color: #ad4545;
+    text-decoration: #fff;
+  }
+  
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px; 
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #inicio {
+        font-size: 24px; 
+        padding-top: 100px; 
+        text-align: center; 
+        background-size: cover;
+        background-position: center; 
+    }
+
+    .flex-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px;
+    }
+
+    #product, #central {
+        font-size: 20px; 
+        text-align: center; 
+    }
+
+    #milista {
+        padding-right: 10px; 
+        padding-left: 10px; 
+    }
+
+    .galeria {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .imagen img {
+        width: 100%; 
+        max-width: 500px; 
+        margin: 0 auto; 
+    }
+    .learn-more {
+        width: 80%; 
+        margin: 1em auto; 
+        font-size: 16px;
+    }
+
+ 
+}
