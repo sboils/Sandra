@@ -108,6 +108,34 @@ footer {
   width: 100%;
 }
 
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.cookie-consent p {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.cookie-policy {
+  color: #fff;
+  margin-left: 10px;
+}
+
 
 @keyframes fadeIn {
   from {
