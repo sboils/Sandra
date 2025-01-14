@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evernote Maquetación</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="everdiseñ.css">
 
 
@@ -16,27 +17,32 @@
     <div class="container">
         <header class="row">
 
-            <div class="col-3 logo">
-                <img src="ficheros/logo.png" alt="Evernote Logo">
+            <div class="col-12 col-md-3">
+                <div class="logo"> <!---contenedoralimentovertical-->
+                    <img src="ficheros/logo.png" alt="Evernote Logo"><!---img-fluid-->
 
+                </div>
             </div>
-            <nav class="col-6 header-nav">
-                <a href="#">PRODUCTS</a>
-                <span class="separator">|</span>
-                <a href="#">NOTEWORTHY BLOG</a>
-                <span class="separator">|</span>
-                <a href="#">THE TRUNK</a>
+            <nav class="col-12 col-md-6"id="menu">
+                <div class="menu-central" id="menu">
+
+                    <a href="#">PRODUCTS</a>
+                    <span class="separator">|</span>
+                    <a href="#">NOTEWORTHY BLOG</a>
+                    <span class="separator">|</span>
+                    <a href="#">THE TRUNK</a>
+                </div>
             </nav>
-            <div class="col-3 user-links">
-                <a href="#">WEB SIGN IN</a>
-                <a href="#">CREATE ACCOUNT</a>
-                <a href="#">GO PREMIUM</a>
-            </div>
+            <ul class="col-12 col-md-3 user-links"id="menu">
+                <li><a href="#">WEB SIGN IN</a></li>
+                <li> <a href="#">CREATE ACCOUNT</a></li>
+                <li> <a href="#">GO PREMIUM</a></li>
+            </ul>
 
         </header>
 
         <main class="row">
-            <section col-6>
+            <section class="col-6">
                 <h1>Evernote</h1>
 
                 <p class="description">
@@ -58,57 +64,95 @@
         </main>
 
 
-        <section class="row features">
-            <div class="feature">
-                <img src="ficheros/ill_evernote1.png" alt="galeria">
-                <h3>Keep everything in sync</h3>
-                <p>With Evernote, all of your notes, web clips, files, and images are made available on every device and
-                    computer you use.</p>
+        <section class="row col-12 features">
+            <div class="card" id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Keep everything in sync</h4>
+                    <p class="card-text">With Evernote, all of your notes, web clips, files, and images are made
+                        available
+                        on every device and
+                        computer you use.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="ficheros/ill_evernote2.png" alt="galeria">
-                <h3>Remember things you like</h3>
-                <p>Save everything cool and exciting you see online and in the real world. Snap a photo, record some
-                    audio and save it.</p>
+
+            <div class="card" id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote2.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Remember things you like</h4>
+                    <p class="card-text">Save everything cool and exciting you see online and in the real world. Snap a
+                        photo, record some
+                        audio and save it.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="ficheros/ill_evernote3.png" alt="galeria">
-                <h3>Save favorite webpages</h3>
-                <p>Save entire webpages to your Evernote account with our nifty browser extensions. You get the whole
-                    page: text, images, and links.</p>
+
+            <div class="card"id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote3.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Save favorite webpages</h4>
+                    <p class="card-text">Save entire webpages to your Evernote account with our nifty browser
+                        extensions.
+                        You get the whole
+                        page: text, images, and links.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="ficheros/ill_evernote4.png" alt="galeria">
-                <h3>Take notes anywhere</h3>
-                <p>You’re always moving, your notes should be too. With Evernote, your memories are on every computer,
-                    phone, and device you use.</p>
+
+            <div class="card" id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote4.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Take notes anywhere</h4>
+                    <p class="card-text">You’re always moving, your notes should be too. With Evernote, your memories
+                        are on
+                        every computer,
+                        phone, and device you use.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="ficheros/ill_evernote5.png" alt="galeria">
-                <h3>Work with friends and colleagues</h3>
-                <p>Share your notes and collaborate on projects with friends, colleagues, and classmates.</p>
+
+            <div class="card" id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote5.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Work with friends and colleagues</h4>
+                    <p class="card-text">Share your notes and collaborate on projects with friends, colleagues, and
+                        classmates.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="ficheros/ill_evernote6.png" alt="galeria">
-                <h3>Plan your next trip</h3>
-                <p>Keep all of your itineraries, confirmations, scanned travel documents, maps, and plans in Evernote,
+
+            <div class="card" id="cards">
+                <img class="card-img-top" src="ficheros/ill_evernote6.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Plan your next trip</h4>
+                    <p class="card-text"></p>Keep all of your itineraries, confirmations, scanned travel documents,
+                    maps,
+                    and plans in Evernote,
                     so you’ll have them when you need them.</p>
+                </div>
             </div>
+
         </section>
 
-        <footer>
-            <div class="row footer-text">
+
+
+
+        <footer class= "row">
+            <div class="col-6">
+            <div class=" footer-text">
                 <h2>Evernote Stories</h2>
                 <p> Check out the cool ways some of our users use Evernote</p>
             </div>
+        </div>
+        <div class="col-3">
+        </div>
+            <div class="col-3">
             <div class="footer-library">
                 <p class="footer-library-texto"> Check out our video library for more stories,<br>
                     tips and feature demose</p>
                 <button class="video">VIDEO LIBRARY</button>
             </div>
+            </div>
 
         </footer>
     </div>
+
 </body>
 
 </html>

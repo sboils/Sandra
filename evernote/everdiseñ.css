@@ -1,8 +1,7 @@
-
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 body {
@@ -14,8 +13,90 @@ body {
 
 header {
     background-color: #fff;
-    
+
     padding: 15px 0;
+}
+
+.logo {
+    text-align: left;
+}
+
+.menu-central {
+    text-align: center;
+    
+    color: #71c92d;
+    
+}
+#menu a{
+    
+    color: #71c92d;
+}
+
+.user-links {
+    text-align: right;
+    list-style: none;
+    color: #71c92d;
+
+}
+
+
+.features{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+#cards{
+    width: 30%;
+    min-width: 300px; 
+}
+
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000000;
+    
+}
+
+.btn.green {
+    
+    color: rgb(0, 0, 0);
+    border-radius: 20%;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+
+
+.link {
+    color: #71c92d;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+
+
+.footer-library{
+    text-align: center;
+    font-size: 10px;
+}
+.video{
+    
+    background-color: #343434;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    
+
 }
 
 /*
