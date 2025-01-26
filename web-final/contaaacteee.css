@@ -1,5 +1,5 @@
 
-body {
+body { 
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #e5f6da;
@@ -163,30 +163,82 @@ h1:hover::after {
   color: #077013;
 }
 
+/* Media Queries */
+
+/* Ordenadores pequeños (max-width: 1024px) */
+@media (max-width: 1024px) {
+  img {
+    width: 80%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Tabletas (max-width: 768px) */
 @media (max-width: 768px) {
-  body {
-      padding-left: 20px;
-      width: 100%;
-      display: block;
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  #inicio {
-      font-size: 30px;
-      padding-top: 500px;
-      padding-left: 20px;
-      background-size: cover;
+  img {
+    width: 100%;
+    margin: 10px 0;
   }
 
-  .flex-container {
-      flex-direction: column;
-      gap: 10px;
+  .container {
+    max-width: 90%;
+    padding: 10px;
   }
 
-  #product, #central {
-      font-size: 24px;
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Teléfonos (max-width: 480px) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    gap: 5px;
   }
 
-  #milista {
-      padding-right: 20px;
+  img {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item span {
+    font-size: 1rem;
   }
 }

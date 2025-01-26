@@ -1,4 +1,5 @@
-body {
+
+body { 
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #fcdaef, #fcebf6);
@@ -124,93 +125,71 @@ nav a:hover::after {
     transform: translateY(-3px);
 }
 
+/* Media Queries */
 
-@keyframes fadeInBody {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideDownHeader {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes textGlow {
-    from {
-        text-shadow: 0 0 10px #8b144f, 0 0 20px #ca7d98;
-    }
-    to {
-        text-shadow: 0 0 20px #ca7d98, 0 0 40px #8b144f;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-left: 20px;
-        width: 100%;
-        display: block;
+/* Teléfonos  */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
     }
 
-    #inicio {
-        font-size: 30px;
-        padding-top: 500px;
-        padding-left: 20px;
-        background-size: cover;
-    }
-
-    .flex-container {
+    nav {
         flex-direction: column;
         gap: 10px;
     }
 
-    #product, #central {
-        font-size: 24px;
+    .texto h1 {
+        font-size: 1.8rem;
     }
 
-    #milista {
-        padding-right: 20px;
+    .texto p {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .imagen img {
+        max-width: 90%;
+    }
+}
+
+/* Tablets  */
+@media (max-width: 768px) {
+    .texto {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .imagen {
+        flex: 1 1 100%;
+    }
+
+    .texto h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        justify-content: space-between;
+        gap: 15px;
+    }
+}
+
+/* Ordenadores  */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+        gap: 15px;
+    }
+
+    .texto h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
     }
 }

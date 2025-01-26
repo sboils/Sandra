@@ -1,5 +1,4 @@
 
-
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(148, 160, 170);
@@ -7,7 +6,6 @@ body {
     padding: 0;
     color: #333;
 }
-
 
 header {
     display: flex;
@@ -32,22 +30,22 @@ nav a.active {
     color: #000;
 }
 
-
+/* Galería */
 .galeria {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; 
-    justify-content: center; 
+    gap: 10px;
+    justify-content: center;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .gallery {
-    flex: 1 1 calc(20% - 10px); 
+    flex: 1 1 calc(20% - 10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; 
-    height: 300px; 
+    width: 300px;
+    height: 300px;
     margin: 10px;
     overflow: hidden;
 }
@@ -59,47 +57,67 @@ nav a.active {
     object-fit: cover;
 }
 
-
 .gallery:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Media Queries */
 
+/* Ordenadores pequeños (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .galeria {
+        gap: 15px;
+    }
+
+    .gallery {
+        flex: 1 1 calc(25% - 15px); /* Ajusta a 4 columnas */
+    }
+}
+
+/* Tabletas (max-width: 768px) */
 @media (max-width: 768px) {
-    .gallery {
-        flex: 1 1 calc(50% - 10px); 
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        flex: 1 1 100%;
-    }
-}
     body {
-        padding-left: 20px;
-        width: 100%;
-        display: block;
+        padding: 10px;
     }
 
-    #inicio {
-        font-size: 30px;
-        padding-top: 500px;
-        padding-left: 20px;
-        background-size: cover;
+    nav {
+        gap: 10px;
+        justify-content: center;
     }
 
-    .flex-container {
-        flex-direction: column;
+    .galeria {
         gap: 10px;
     }
 
-    #product, #central {
-        font-size: 24px;
+    .gallery {
+        flex: 1 1 calc(50% - 10px); /* Ajusta a 2 columnas */
+    }
+}
+
+/* Teléfonos (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    #milista {
-        padding-right: 20px;
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
+    .galeria {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery {
+        flex: 1 1 100%; /* Una columna */
+    }
+
+    .gallery img {
+        object-fit: contain;
+    }
+}

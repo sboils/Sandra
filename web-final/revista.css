@@ -1,16 +1,13 @@
 
-
-body {
+body { 
     background-color: rgb(253, 159, 159);
     font-family: 'Arial', sans-serif;
     color: #333;
-    
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
-
 
 header {
     display: flex;
@@ -30,14 +27,13 @@ nav a {
     text-decoration: none;
     color: #373737;
     font-weight: bold;
-
 }
-  
+
 .active {
     color: #000000;
-  }
+}
 
-  .flex-container {
+.flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,22 +41,19 @@ nav a {
     gap: 20px;
 }
 
-.image{ 
+.image { 
     width: 50%;
     display: flex;
     text-align: center;
 }
- 
 
 main {
     padding: 20px;
 }
 
-
 .galeria {
     display: flex;
     text-align: center;
-    
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -68,10 +61,7 @@ main {
 
 .imagen {
     border-radius: 10px;
-   
-
 }
-
 
 .video video {
     width: 100%;
@@ -90,13 +80,12 @@ main {
     border-radius: 20px;
     font-weight: bold;
     width: 20%;
-  }
-  
-  .learn-more:hover {
+}
+
+.learn-more:hover {
     background-color: #ad4545;
-    text-decoration: #fff;
-  }
-  
+    text-decoration: none;
+}
 
 .imagen img {
     width: 100%;
@@ -111,55 +100,90 @@ main {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Media Queries */
 
-
-@media (max-width: 768px) {
+/* Estilos para dispositivos móviles (max-width: 576px) */
+@media (max-width: 576px) {
     body {
-        padding: 20px; 
-        width: 100%;
-        display: flex;
-        flex-direction: column; 
+        padding: 10px;
+        flex-direction: column;
     }
 
-    #inicio {
-        font-size: 24px; 
-        padding-top: 100px; 
-        text-align: center; 
-        background-size: cover;
-        background-position: center; 
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .flex-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
         gap: 10px;
-    }
-
-    #product, #central {
-        font-size: 20px; 
-        text-align: center; 
-    }
-
-    #milista {
-        padding-right: 10px; 
-        padding-left: 10px; 
+        text-align: center;
     }
 
     .galeria {
-        flex-direction: column; 
-        gap: 15px; 
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image {
+        width: 100%;
     }
 
     .imagen img {
-        width: 100%; 
-        max-width: 500px; 
-        margin: 0 auto; 
-    }
-    .learn-more {
-        width: 80%; 
-        margin: 1em auto; 
-        font-size: 16px;
+        max-width: 100%;
     }
 
- 
+    .learn-more {
+        width: 90%;
+        margin: 1em auto;
+    }
+}
+
+/* Estilos para tabletas (max-width: 768px) */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .galeria {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .imagen img {
+        width: 100%;
+    }
+
+    .learn-more {
+        width: 70%;
+        margin: 1em auto;
+    }
+}
+
+/* Estilos para ordenadores pequeños y medianos (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .galeria {
+        gap: 20px;
+    }
+
+    .flex-container {
+        gap: 15px;
+    }
+
+    .image {
+        width: 60%;
+    }
+
+    .learn-more {
+        width: 30%;
+    }
 }
