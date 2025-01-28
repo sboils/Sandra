@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex; /* Para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Espaciado entre enlaces */
+}
+
+nav a {
+    text-decoration: none;
+    color: #373737;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #cb1111;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #670a0a;
+    transform: scale(1.1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: #000000;
+}
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+
+        .content {
+            z-index: 2;
+            margin-top: 50px;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .content button {
+            padding: 10px 20px;
+            background-color: #4a0808;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .swiper-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            z-index: 2;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: start;
+            justify-content: space-evenly;
+            transition: background 0.3s;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgba(93, 4, 4, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="#" class="active">SERVICIOS</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Primera sección -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="img/negamidf_adelanto-cheste_2025-01-28_0903/050_89_N/050_CHT274000757.MP4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h1>ENTRENAMIENTOS</h1>
+            <p>Descubre programas especializados para maximizar tu potencial.</p>
+            <a href="entrenamientos.html">
+                <button>Más Información</button>
+            </a>
+        </div>
+
+        <div class="swiper-container swiper-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.50.56.png" alt="Imagen 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.52.18.png" alt="Imagen 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.20.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.24.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.30.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.54.00.png" alt="Imagen 3">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Segunda sección -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="img/negamidf_adelanto-cheste_2025-01-28_0903/267_028_67/267_CHT274003802.MP4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h1>CASA</h1>
+            <p>Descubre programas para el confort y bienestar en tu hogar.</p>
+            <button>Más Información</button>
+        </div>
+
+        <div class="swiper-container swiper-2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.50.56.png" alt="Imagen 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.52.18.png" alt="Imagen 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.20.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.24.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.30.png" alt="Imagen 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="imgs/WhatsApp Image 2025-01-28 at 12.54.00.png" alt="Imagen 3">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializa el primer carrusel
+        var swiper1 = new Swiper('.swiper-1', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-1 .swiper-button-next',
+                prevEl: '.swiper-1 .swiper-button-prev',
+            },
+        });
+
+        // Inicializa el segundo carrusel
+        var swiper2 = new Swiper('.swiper-2', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-2 .swiper-button-next',
+                prevEl: '.swiper-2 .swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

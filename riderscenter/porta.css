@@ -1,0 +1,275 @@
+body { 
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    position: fixed; /* Hace que el header sea fijo */
+    top: 0; /* Se queda en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupará el ancho completo */
+    z-index: 1000; /* Se asegura de estar encima de otros elementos */
+  
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #373737;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #cb1111;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #670a0a;
+    transform: scale(1.1);
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  .active {
+    color: #000000;
+  }
+  
+  .banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+  }
+  
+  
+  .banner h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease;
+  }
+  
+  .banner p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: slideUp 2s ease;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(45deg, #cb1111, #470505);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #490a0a;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .cookie-consent p {
+    margin-bottom: 10px;
+  }
+  
+  .cookie-policy {
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  
+  /* Ordenadores pequeños (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .navbar {
+      gap: 20px;
+    }
+  
+    .banner h1 {
+      font-size: 2.5rem;
+    }
+  
+    .banner p {
+      font-size: 1.2rem;
+    }
+  
+    .button-container {
+      flex-direction: row;
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tabletas (max-width: 768px) */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  
+    .banner {
+      height: 80vh;
+      padding: 15px;
+    }
+  
+    .banner h1 {
+      font-size: 2rem;
+    }
+  
+    .banner p {
+      font-size: 1rem;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 8px 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Teléfonos (max-width: 480px) */
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .banner {
+      height: 70vh;
+      padding: 10px;
+    }
+  
+    .banner h1 {
+      font-size: 1.8rem;
+    }
+  
+    .banner p {
+      font-size: 0.9rem;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 8px 15px;
+      width: 90%;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
