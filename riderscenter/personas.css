@@ -46,13 +46,13 @@ body {
 /* Navbar */
 
 header {
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     padding: 10px 0;
-    border-bottom: 1px solid #dddddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    animation: slideDownHeader 1s ease;
     position: fixed; /* Hace que el header sea fijo */
     top: 0; /* Se queda en la parte superior */
     left: 0;
@@ -60,10 +60,58 @@ header {
     z-index: 1000; /* Se asegura de estar encima de otros elementos */
   
     padding: 10px 0;
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+  }
+  .navbar {
+    display: flex;
+    gap: 20px;
+    background: #ffffff;
+    padding: 10px 0;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #6e6e6e;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #cb1111;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #670a0a;
+    transform: scale(1.1);
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  .active {
+    color: #000000;
+  }
     
     .dropbtn {
         cursor: pointer;
@@ -94,44 +142,7 @@ header {
     .dropdown:hover .dropdown-content {
         display: block;
     }
-}
 
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #373737;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #14408b;
-    transition: width 0.3s ease;
-}
-
-nav a:hover {
-    color: #14618b;
-    transform: scale(1.1);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-.active {
-    color: #000000;
-}
 
 /* Contenedor de equipo */
 .container {
