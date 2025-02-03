@@ -130,7 +130,20 @@
                             ¡Porque cada curva y cada frenada requieren un físico al 100%!
                         </p>
                         <Br>
-                        <a href="#" class="btn">Saber más</a>
+                            <a href="#" class="btn" data-service="asistencia">Contactar</a>
+                            <div id="contactModal" class="modal">
+                                <div class="modal-content">
+                                  <span class="close">&times;</span>
+                                  <h2> <span id="serviceName"></span></h2>
+                                  <form id="contactForm">
+                                    <input type="text" placeholder="Nombre" required>
+                                    <input type="email" placeholder="Email" required>
+                                    <textarea placeholder="Mensaje" required></textarea>
+                                    <button type="submit" class="btn">Enviar</button>
+                                  </form>
+                                </div>
+                              </div>
+                              
 
                     </div>
 
@@ -243,7 +256,38 @@
 
 
 
-
+    <script>
+        const modal = document.getElementById("contactModal");
+        const btns = document.querySelectorAll(".btn");
+        const span = document.getElementsByClassName("close")[0];
+        const serviceName = document.getElementById("serviceName");
+      
+        btns.forEach(btn => {
+          btn.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            serviceName.textContent = this.getAttribute("data-service");
+          }
+        });
+      
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      
+        document.getElementById("contactForm").onsubmit = function(e) {
+          e.preventDefault();
+          // Aquí puedes agregar la lógica para enviar el formulario
+          alert("Formulario enviado");
+          modal.style.display = "none";
+        }
+      </script>
+      
 
 
 </body>
