@@ -2,7 +2,7 @@
 body { 
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #e5f6da;
+  background-color: #313131;
   color: #333;
   transition: background-color 0.5s ease;
 }
@@ -128,7 +128,7 @@ img:hover {
 main {
   margin: 50px auto;
   padding: 20px;
-  background-color: #e5f6da;
+  background-color:  #313131;
   animation: fadeIn 1s ease-out;
 }
 
@@ -166,7 +166,7 @@ h1::after {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #077013;
+  background-color: #000000;
   transition: width 0.5s ease, left 0.5s ease;
 }
 
@@ -209,87 +209,8 @@ h1:hover::after {
 }
 
 .contact-item a:hover {
-  color: #077013;
+  color: #435490;
 }
 
-/* Media Queries */
-
-/* Ordenadores pequeños (max-width: 1024px) */
-@media (max-width: 1024px) {
-  img {
-    width: 80%;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  nav {
-    gap: 15px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* Tabletas (max-width: 768px) */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  img {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .container {
-    max-width: 90%;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Teléfonos (max-width: 480px) */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  img {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  h1 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-
-  .container {
-    padding: 10px;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-item span {
-    font-size: 1rem;
-  }
-}
 
   

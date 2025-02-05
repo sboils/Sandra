@@ -178,7 +178,7 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: linear-gradient(45deg, #cb1111, #470505);
+    background: linear-gradient(45deg, #0A0A3D, #182c9a);
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
@@ -202,7 +202,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 5, 63, 0.8);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -238,101 +238,4 @@ body {
     }
   }
   
-  /* Media Queries */
-  
-  /* Ordenadores pequeños (max-width: 1024px) */
-  @media (max-width: 1024px) {
-    .navbar {
-      gap: 20px;
-    }
-  
-    .banner h1 {
-      font-size: 2.5rem;
-    }
-  
-    .banner p {
-      font-size: 1.2rem;
-    }
-  
-    .button-container {
-      flex-direction: row;
-      gap: 10px;
-    }
-  
-    .btn {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-  }
-  
-  /* Tabletas (max-width: 768px) */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-    }
-  
-    .banner {
-      height: 80vh;
-      padding: 15px;
-    }
-  
-    .banner h1 {
-      font-size: 2rem;
-    }
-  
-    .banner p {
-      font-size: 1rem;
-    }
-  
-    .button-container {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .btn {
-      padding: 8px 20px;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
-  /* Teléfonos (max-width: 480px) */
-  @media (max-width: 480px) {
-    nav {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-  
-    .banner {
-      height: 70vh;
-      padding: 10px;
-    }
-  
-    .banner h1 {
-      font-size: 1.8rem;
-    }
-  
-    .banner p {
-      font-size: 0.9rem;
-    }
-  
-    .button-container {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .btn {
-      padding: 8px 15px;
-      width: 90%;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-  
-    footer {
-      font-size: 0.8rem;
-    }
-  }
   

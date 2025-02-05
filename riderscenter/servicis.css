@@ -52,6 +52,118 @@ section {
     margin-bottom: 20px;
 }
 
+  /* Cuadro de contacto */
+  #contactBox {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0A0A3D;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+    width: 80%;
+    max-width: 400px;
+    
+}
+#contactBox2 {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0A0A3D;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+    width: 80%;
+    max-width: 400px;
+}
+#contactBox a {
+    color: white; /* Cambia el color a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    text-align:left;
+}
+
+/* Hover para enlaces */
+#contactBox a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+#contactBox h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:  #ffffff;
+    text-align:center;
+}
+
+#contactBox p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#contactBox .close {
+    background-color: #2b2b47;
+    color: white;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contactBox .close:hover {
+    background-color: #bdbdff;
+    color: #2b2b47;
+}
+
+
+
+#contactBox2 a {
+    color: white; /* Cambia el color a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    text-align:left;
+}
+
+/* Hover para enlaces */
+#contactBox2 a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+.contact-box a:hover{
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+#contactBox2 h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:  #ffffff;
+    text-align:center;
+}
+
+#contactBox2 p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#contactBox2 .close {
+    background-color: #2b2b47;
+    color: white;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contactBox2 .close:hover {
+    background-color: #bdbdff;
+    color: #2b2b47;
+}
+
+
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -65,6 +177,62 @@ section {
 }
 
 .btn:hover {
+    background-color: #2c2c48;
+    color: #0A0A3D;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: #0A0A3D;
+    background-color: rgb(196, 190, 255);
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+
+
+.contact-box {
+    display: none;
+    position: fixed;
+    background: #0A0A3D;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    
+    width:80%;
+    top: 50%;
+    left: 50%;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+
+.close:hover {
+    background-color: #bdbdff;
+    color: #2b2b47;
+}
+
+.close {
+    background-color: #2b2b47;
+    color: white;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-box a {
+    color: white; /* Cambia el color a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    text-align:left;
+}
+.boton:hover {
     background-color: #2c2c48;
     color: #0A0A3D;
 }
