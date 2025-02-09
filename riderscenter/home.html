@@ -9,30 +9,35 @@
     <link rel="stylesheet" href="porta.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-        <a href="home.html" class="active">INICIO</a>
-        
-        <div class="dropdown">
-            <a href="servicios.html" class="dropbtn">Servicios ▼</a>
-            <div class="dropdown-content">
-              <a href="servicios.html#entrenamientos" >Entrenamientos en circuito</a>
-              <a href="servicios.html#asistencia" >Asistencia mecánica</a>
-              
-              <a href="servicios.html#alojamiento" >Alojamiento</a>
-                  <a href="servicios.html#fisioterapia">Fisioterapia</a>
-                  <a href="servicios.html#NUTRICIÓN" >Nutrición deportiva</a>
-                  <a href="servicios.html#PSICÓLOGO" >Psicología deportivo</a>
-                  <a href="servicios.html#diseñadora">Diseño gráfico</a>
-                  <a href="servicios.html#community">Community manager</a>
-                  <a href="servicios.html#asesoramiento juridico">Asesoramiento jurídico</a>
-                </div>
-        </div>
-        <a href="equipo.html">Equipo</a>
-        <a href="pilotos.html">Pilotos</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-</header>
+
+        <header>
+          <nav class="navbar">
+              <div class="menu-toggle" onclick="toggleMenu()">
+                  ☰ <!-- Ícono de menú hamburguesa -->
+              </div>
+              <ul class="nav-links">
+                  <li><a href="home.html" class="active">INICIO</a></li>
+                  <li class="dropdown">
+                      <a href="servicios.html" class="dropbtn">Servicios ▼</a>
+                      <ul class="dropdown-content">
+                          <li><a href="servicios.html#entrenamientos">Entrenamientos en circuito</a></li>
+                          <li><a href="servicios.html#asistencia">Asistencia mecánica</a></li>
+                          <li><a href="servicios.html#alojamiento">Alojamiento</a></li>
+                          <li><a href="servicios.html#fisioterapia">Fisioterapia</a></li>
+                          <li><a href="servicios.html#nutricion">Nutrición deportiva</a></li>
+                          <li><a href="servicios.html#psicologo">Psicología deportiva</a></li>
+                          <li><a href="servicios.html#diseño">Diseño gráfico</a></li>
+                          <li><a href="servicios.html#community">Community manager</a></li>
+                          <li><a href="servicios.html#juridico">Asesoramiento jurídico</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="equipo.html">Equipo</a></li>
+                  <li><a href="pilotos.html">Pilotos</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+          </nav>
+      </header>
+      
 
 
     
@@ -73,4 +78,10 @@
           
     </footer>
 </body>
+<script>
+  function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+  }
+  </script>
+  
 </html>

@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    width: 800px; /* Ajusta el tamaño según necesites */
+    width: 80%; /* Ajusta el tamaño según necesites */
     height: auto;
 }
 
@@ -238,4 +238,52 @@ body {
     }
   }
   
-  
+  /* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* Ocultar menú por defecto en móviles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+/* Ocultar menú en móviles por defecto */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Se muestra el botón de menú */
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: white;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 10px;
+      display: block;
+  }
+}
+

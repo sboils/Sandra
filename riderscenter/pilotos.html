@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             transition: background-image 0.3s ease-in-out;
             background-size: cover;
             background-position: center;
+            padding-top: 60px;
+            /* Espacio para el header fijo */
         }
 
         .container {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
+            width: 90%;
+            max-width: 1200px;
             transition: opacity 0.3s;
         }
 
         .card {
-            width: 200px;
+            width: calc(50% - 20px);
+            /* Dos tarjetas por fila en pantallas medianas */
+            max-width: 300px;
             height: 400px;
             padding: 20px;
             border-radius: 10px;
@@ -38,9 +47,14 @@
             font-weight: bold;
             background-blend-mode: multiply;
             cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Sombreado sutil */
         }
 
-        .card h1, .card h3, .card p, .card span {
+        .card h1,
+        .card h3,
+        .card p,
+        .card span {
             position: relative;
             z-index: 2;
             transition: color 0.3s;
@@ -55,14 +69,17 @@
             background-size: cover;
             background-position: center;
             background-color: rgba(255, 255, 255, 0.092);
+            border-radius: 10px;
+            /* Igual que la tarjeta */
         }
 
         .card:hover {
             z-index: 3;
-            background-color: rgba(255, 255, 255, 0.178); /* Eliminar color de fondo */
-            background-image: none; /* Eliminar la imagen de fondo */
+            background-color: rgba(255, 255, 255, 0.178);
+            /* Eliminar color de fondo */
+            background-image: none;
+            /* Eliminar la imagen de fondo */
         }
-        
 
         /* Diferentes imágenes de fondo para cada tarjeta */
         .card:nth-child(1) {
@@ -103,175 +120,229 @@
         }
 
         /* Efecto hover para cambiar la imagen de cada tarjeta */
-.card:nth-child(1):hover {
-    background-image: url(img/marcos/image00004.jpeg); /* Imagen al hacer hover */
-}
+        .card:nth-child(1):hover {
+            background-image: url(img/marcos/image00004.jpeg);
+            /* Imagen al hacer hover */
+        }
 
-.card:nth-child(2):hover {
-    background-image: url(img/casey/IMG_0593.jpeg);
-}
+        .card:nth-child(2):hover {
+            background-image: url(img/casey/IMG_0593.jpeg);
+        }
 
-.card:nth-child(3):hover {
-    background-image: url(img/JOENG/joensoo\ triunfo.jpg);
-}
+        .card:nth-child(3):hover {
+            background-image: url(img/JOENG/joensoo triunfo.jpg);
+        }
 
-.card:nth-child(4):hover {
-    background-image: url(img/ALEX/s1gp-sardinia-6914.jpeg);
-}
+        .card:nth-child(4):hover {
+            background-image: url(img/ALEX/s1gp-sardinia-6914.jpeg);
+        }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px 0;
-    position: fixed; /* Hace que el header sea fijo */
-    top: 0; /* Se queda en la parte superior */
-    left: 0;
-    width: 100%; /* Ocupará el ancho completo */
-    z-index: 1000; /* Se asegura de estar encima de otros elementos */
-  
-    padding: 10px 0;
-  }
-  .navbar {
-    display: flex;
-    gap: 20px;
-    background: #ffffff;
-    padding: 10px 0;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #6e6e6e;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #cb1111;
-    transition: width 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #670a0a;
-    transform: scale(1.1);
-  }
-  
-  nav a:hover::after {
-    width: 100%;
-  }
-  
-  .active {
-    color: #000000;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-}
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 0;
+        }
 
-.dropbtn {
-    cursor: pointer;
-}
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-    z-index: 1000;
-    border-radius: 5px;
-    overflow: hidden;
-}
+        nav {
+            display: flex;
+            gap: 20px;
+        }
 
-.dropdown-content a {
-    color: #373737;
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s ease;
-}
+        nav a {
+            text-decoration: none;
+            color: #6e6e6e;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: #cb1111;
+            transition: width 0.3s ease;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        nav a:hover {
+            color: #670a0a;
+            transform: scale(1.1);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .active {
+            color: #000000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1000;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #373737;
+            padding: 10px 15px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Estilos para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 50px;
+                /* Ajuste para el header fijo */
+            }
+
+            .container {
+                flex-direction: column;
+                /* Apilar las tarjetas verticalmente */
+                align-items: center;
+                /* Centrar horizontalmente */
+            }
+
+            .card {
+                width: 80%;
+                /* Ocupar la mayor parte del ancho en pantallas pequeñas */
+                max-width:100%;
+                /* Eliminar el ancho máximo */
+                height:550PX;
+                /* Ajustar la altura automáticamente */
+                margin-bottom: 20px;
+                /* Espacio entre tarjetas */
+            }
+
+            .navbar {
+                flex-direction: column;
+                /* Apilar los enlaces */
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                /* Apilar los enlaces */
+                align-items: center;
+                gap: 10px;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                width: 100%;
+                /* Ocupar el ancho completo */
+            }
+
+            .dropdown-content a {
+                padding: 8px 15px;
+                border-bottom: 1px solid #eee;
+                /* Separador entre enlaces */
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+                /* Deshabilitar el hover en móviles */
+            }
+
+            .dropdown .dropbtn {
+                padding: 8px 15px;
+                display: block;
+                text-align: center;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
-            <a href="home.html" >Inicio</a>
-            
+            <a href="home.html">Inicio</a>
+
             <div class="dropdown">
                 <a href="servicios.html" class="dropbtn">Servicios ▼</a>
                 <div class="dropdown-content">
-                  <a href="servicios.html#entrenamientos" >Entrenamientos en circuito</a>
-                  <a href="servicios.html#asistencia" >Asistencia mecánica</a>
-                  
-                  <a href="servicios.html#alojamiento" >Alojamiento</a>
-                  <a href="servicios.html#fisioterapia">Fisioterapia</a>
-                  <a href="servicios.html#NUTRICIÓN" >Nutrición deportiva</a>
-                  <a href="servicios.html#PSICÓLOGO" >Psicología deportivo</a>
-                  <a href="servicios.html#diseñadora">Diseño gráfico</a>
-                  <a href="servicios.html#community">Community manager</a>
-                  <a href="servicios.html#asesoramiento juridico">Asesoramiento jurídico</a>
+                    <a href="servicios.html#entrenamientos">Entrenamientos en circuito</a>
+                    <a href="servicios.html#asistencia">Asistencia mecánica</a>
+
+                    <a href="servicios.html#alojamiento">Alojamiento</a>
+                    <a href="servicios.html#fisioterapia">Fisioterapia</a>
+                    <a href="servicios.html#NUTRICIÓN">Nutrición deportiva</a>
+                    <a href="servicios.html#PSICÓLOGO">Psicología deportivo</a>
+                    <a href="servicios.html#diseñadora">Diseño gráfico</a>
+                    <a href="servicios.html#community">Community manager</a>
+                    <a href="servicios.html#asesoramiento juridico">Asesoramiento jurídico</a>
                 </div>
             </div>
             <a href="equipo.html">Equipo</a>
-            <a href="pilotos.html" class="active"> PILOTOS</a>
+            <a href="pilotos.html" class="active">PILOTOS</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
-    
+
     <div class="container">
         <div class="card" data-bg="card-1-bg">
-            
-           
+
+
         </div>
         <div class="card" data-bg="card-2-bg">
-           
+
             <h1></h1>
-            
+
         </div>
         <div class="card" data-bg="card-3-bg">
-           
+
         </div>
         <div class="card" data-bg="card-4-bg">
-            
+
         </div>
     </div>
-    
+
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const cards = document.querySelectorAll(".card");
             cards.forEach(card => {
-                card.addEventListener("mouseenter", function() {
+                card.addEventListener("mouseenter", function () {
                     // Cambiar el fondo de la página web según la tarjeta
                     const bgClass = card.getAttribute("data-bg");
                     document.body.classList.add(bgClass);
@@ -284,10 +355,7 @@ header {
                         }
                     });
                 });
-          
-
-
-                card.addEventListener("mouseleave", function() {
+                card.addEventListener("mouseleave", function () {
                     // Restaurar el fondo original de la página
                     const bgClass = card.getAttribute("data-bg");
                     document.body.classList.remove(bgClass);
@@ -302,5 +370,12 @@ header {
         });
     </script>
 </body>
+
 </html>
+
+
+
+
+
+
 
