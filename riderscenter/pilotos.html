@@ -228,10 +228,7 @@
 
         /* Estilos para pantallas más pequeñas */
         @media (max-width: 768px) {
-            body {
-                padding-top: 50px;
-                /* Ajuste para el header fijo */
-            }
+           
 
             .container {
                 flex-direction: column;
@@ -251,51 +248,67 @@
                 /* Espacio entre tarjetas */
             }
 
-            .navbar {
-                flex-direction: column;
-                /* Apilar los enlaces */
-                align-items: center;
-                gap: 10px;
-            }
+           
 
-            nav {
-                flex-direction: column;
-                /* Apilar los enlaces */
-                align-items: center;
-                gap: 10px;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                border-radius: 0;
-                width: 100%;
-                /* Ocupar el ancho completo */
-            }
-
-            .dropdown-content a {
-                padding: 8px 15px;
-                border-bottom: 1px solid #eee;
-                /* Separador entre enlaces */
-            }
-
-            .dropdown:hover .dropdown-content {
-                display: none;
-                /* Deshabilitar el hover en móviles */
-            }
-
-            .dropdown .dropbtn {
-                padding: 8px 15px;
-                display: block;
-                text-align: center;
-            }
+        
         }
+
+         /* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* Ocultar menú por defecto en móviles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+/* Ocultar menú en móviles por defecto */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Se muestra el botón de menú */
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: white;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 10px;
+      display: block;
+  }
+}
+
     </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+           
             <a href="home.html">Inicio</a>
 
             <div class="dropdown">
@@ -318,6 +331,7 @@
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
+    
 
     <div class="container">
         <div class="card" data-bg="card-1-bg">
@@ -368,6 +382,11 @@
                 });
             });
         });
+        
+  function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+  }
+  
     </script>
 </body>
 
