@@ -434,7 +434,7 @@ header {
 
     .text-box {
         width: 45%;
-        
+
     }
 
     .text-box h2 {
@@ -445,11 +445,5 @@ header {
         font-size: 1.2rem;
     }
 
-    .overlay {
-        font-size: 3rem;
-    }
-
-    .navbar {
-        gap: 30px;
-    }
+    
 }
