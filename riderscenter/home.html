@@ -130,6 +130,51 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            color: #333;
+        }
+
+        /* Keyframes and Logo styles remain the same */
+
+        /* Header and Navbar styles remain the same */
+
+        /* Banner styles - IMPORTANT */
+        .banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh; /* Changed height to min-height */
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .banner video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover; /* Added to ensure the video covers the entire area */
+            opacity: 50%;
+        }
+
+        /* Button Container and Button styles remain the same */
+
+        /* Footer styles remain the same */
+
+        /* Animations remain the same */
 
         .banner {
             position: relative;
@@ -311,6 +356,28 @@
           margin-bottom: 5px;
         }
         }
+
+        
+        /* Hamburger Menu styles remain the same */
+
+        /* Media Queries for Responsiveness - IMPORTANT */
+        @media (max-width: 768px) {
+            /* Adjust header and nav links as before */
+
+             /* Adjust button container as before */
+
+            /* Banner adjustments for mobile - IMPORTANT */
+            .banner {
+                min-height: 70vh; /* Reduce height on smaller screens */
+                padding: 10px;
+            }
+
+            .banner video {
+                object-fit: cover; /* ensure the video fills area */
+                
+            }
+        }
+      
     </style>
 </head>
 
