@@ -272,6 +272,125 @@
             display: inline-block;
             transition: background 0.3s ease;
         }
+
+        /* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0A0A3D;
+  color: white;
+}
+
+/* Sección de Sponsors (Parte superior, fondo negro) */
+.sponsors {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sponsors img {
+  height: 40px;
+}
+
+/* Contenedor azul con enlaces y logos */
+.footer-main {
+  background-color: #0A0A3D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  text-align: left;
+}
+
+.footer-links {
+  width: 30%;
+}
+
+.footer-links h4,
+.social-media h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  color: #F1F1F1;
+}
+
+/* Logos a la derecha */
+.footer-logo {
+  width: 30%;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin: 5px;
+}
+
+/* Redes sociales */
+.social-media {
+  width: 30%;
+  text-align: right;
+}
+
+.social-media .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.social-media .icons a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-media .icons a:hover {
+  color: #F1F1F1;
+}
+
+/* Pie de página */
+.footer-bottom {
+  background-color:#0A0A3D;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-main {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .footer-links, .footer-logo, .social-media {
+      width: 100%;
+  }
+
+  .social-media .icons {
+      justify-content: center;
+  }
+}
     </style>
 </head>
    
@@ -438,6 +557,20 @@
     
             </video>
             <div class="overlay"></div>
+
+          
+        
+       
+        
+
+
+
+
+
+
+
+
+    </footer>
     </body>
     
     </html>
