@@ -164,24 +164,103 @@
             display: block;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .location {
-                border-right: none;
-                border-bottom: 1px solid rgb(255, 255, 255);
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-            }
-
-            .location:last-child {
-                border-bottom: none;
-            }
-
+        @media (max-width: 768px)  @media (max-width: 768px) {
+        body {
+            margin: 0; /* Elimina márgenes para mejor uso en móviles */
         }
+
+        .navbar {
+            flex-direction: column; /* Apila los elementos de navegación */
+            align-items: center; /* Centra los elementos */
+        }
+
+        nav {
+            flex-direction: column; /* Apila los enlaces */
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 14px; /* Reduce el tamaño de la fuente */
+            padding: 5px; /* Reduce el espacio alrededor de los enlaces */
+        }
+
+        .dropdown-content {
+            position: static; /* Evita el posicionamiento absoluto */
+            box-shadow: none;
+            border-radius: 0;
+            width: 100%; /* Ocupa el ancho completo */
+            padding: 0;
+        }
+
+        .dropdown-content a {
+            padding: 8px 15px;
+            border-bottom: 1px solid #eee; /* Agrega un separador */
+        }
+
+        .video-background {
+            position: fixed; /* Posiciona el video fixed para cubrir la pantalla */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Altura completa */
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background video {
+            width: 100%; /* Ancho completo */
+            height: auto; /* Altura automática para mantener la relación de aspecto */
+            min-height: 100%; /* Mínima altura del 100% para cubrir todo el fondo */
+            object-fit: cover; /* Cubre el área, recortando si es necesario */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 4, 45, 0.859);
+            z-index: 0;
+        }
+
+        .container {
+            flex-direction: column; /* Apila los elementos */
+            align-items: center; /* Centra los elementos */
+            padding: 20px;
+        }
+
+        .location {
+            text-align: center; /* Centra el texto */
+            width: 90%; /* Ancho más grande */
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(255, 255, 255); /* Separación clara */
+        }
+
+        .location:last-child {
+            border-bottom: none; /* Quita la línea del último elemento */
+        }
+
+        h2 {
+            font-size: 20px; /* Tamaño de fuente ajustado */
+        }
+
+        p {
+            font-size: 16px; /* Tamaño de fuente ajustado */
+        }
+
+        a {
+            font-size: 14px; /* Tamaño de fuente ajustado */
+        }
+
+        summary {
+            font-size: 14px; /* Tamaño de fuente ajustado */
+        }
+
+        h4 {
+            font-size: 16px; /* Tamaño de fuente ajustado */
+        }
+    }
 
 
 
