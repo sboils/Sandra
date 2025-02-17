@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>servicios</title>
     <link rel="stylesheet" href="servicis.css">
-    <link rel="icon" href="riderscenter/img/LOGOS/arriba/favicon_io/apple-touch-icon.png" type="image/png">
+    <link rel="icon" href="img/LOGOS/arriba/favicon_io/apple-touch-icon.png" type="image/png">
 
 </head>
 
@@ -14,13 +14,11 @@
     <header>
         <nav class="navbar">
             <a href="../index.html">Inicio</a>
-
             <div class="dropdown">
                 <a href="servicios.html" class="active" class="dropbtn">SERVICIOS ▼</a>
                 <div class="dropdown-content">
                     <a href="servicios.html#entrenamientos">Entrenamientos en circuito</a>
                     <a href="servicios.html#asistencia">Asistencia mecánica</a>
-
                     <a href="servicios.html#alojamiento">Alojamiento</a>
                     <a href="servicios.html#fisioterapia">Fisioterapia</a>
                     <a href="servicios.html#NUTRICIÓN">Nutrición deportiva</a>
@@ -31,10 +29,20 @@
                 </div>
             </div>
             <a href="equipo.html">Equipo</a>
-            <a href="pilotos.html"> Pilotos</a>
+            <a href="pilotos.html">Pilotos</a>
             <a href="contacto.html">Contacto</a>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
         </nav>
     </header>
+    
 
 
 
@@ -163,7 +171,19 @@
                             En nuestro centro, diseñamos estrategias nutricionales personalizadas, enfocadas en las
                             necesidades específicas de cada piloto. </p>
                         <BR>
-                        <a href="#" class="btn">Saber más</a>
+                            <div class="container">
+                                <a href="#" class="boton contactButton" data-target="contactBox-NUTRI">Contacto</a>
+                            </div>
+    
+                            <div id="contactBox-juridico" class="contact-box">
+                                <h2>CONTACTO</h2>
+                                <p><strong>Tlf:</strong> <a href="tel:+34 667055011">+34 667 055 011</a></p>
+                                <p><strong>Email:</strong> <a
+                                        href="mailto:dacorsa.competizione@gmail.com">dacorsa.competizione@gmail.com</a></p>
+                                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dacorsa.competizione/"
+                                        target="_blank">@dacorsa.competizione</a></p>
+                                <button class="close closeButton">x</button>
+                            </div>
                     </div>
 
                 </div>
@@ -403,6 +423,19 @@
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
+
+        function changeLanguage() {
+    var language = document.getElementById('language-select').value;
+    
+    // Redirigir a diferentes URLs según el idioma seleccionado
+    if (language === "es") {
+        window.location.href = "servicios.html"; // Página en español
+    } else if (language === "en") {
+        window.location.href = "en/servicios.html"; // Página en inglés
+    } else if (language === "it") {
+        window.location.href = "it/servicios.html"; // Página en italiano
+    }
+}
     </script>
 </body>
 

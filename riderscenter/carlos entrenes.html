@@ -1,372 +1,459 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Information</title>
+    <title>Dacorsa competizione</title>
+    <link rel="icon" href="img/LOGOS/arriba/favicon_io/apple-touch-icon.png" type="image/png">
     <style>
         body {
-            margin: 90;
+            font-family: sans-serif;
+            /* Choose a suitable font */
+            margin: 0;
             padding: 0;
-            color: rgb(255, 255, 255);
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        .video-background video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 4, 45, 0.859);
-            z-index: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            text-align: left;
+            /* Center the content */
         }
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            /* Center the container */
+            padding: 20px;
         }
 
-        .location {
-            text-align: left;
-            padding: 20px;
-            width: 250px;
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
             margin-bottom: 20px;
+            letter-spacing: -0.05em;
+            color: #111;
         }
 
         h2 {
-            font-size: 24px;
+            font-size: 1.8em;
             font-weight: bold;
-            text-transform: uppercase;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #111;
         }
 
         p {
-            font-size: 22px;
-            margin: 5px 0;
+            font-size: 1em;
+            color: #444;
         }
 
-        a {
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-size: 12px;
-            margin: 1px 0;
+        .image-section {
+            margin-bottom: 30px;
         }
 
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 10px 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #6e6e6e;
-            font-weight: bold;
+        .rounded-image {
+            border-radius: 20px;
+            overflow: hidden;
             position: relative;
-            transition: color 0.3s ease, transform 0.3s ease;
+            /* Needed for positioning the text overlay */
         }
 
-        nav a::after {
-            content: "";
+        .rounded-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .image-overlay-text {
             position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 2px;
-            background-color: #cb1111;
-            transition: width 0.3s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
         }
 
-        nav a:hover {
-            color: #670a0a;
+        .small-text {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #111;
+        }
+
+        .boton-contactButton {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #111;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            /* Indicate that is a pointer */
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.8em;
+            }
+
+            .image-overlay-text {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .contact-box {
+            display: none;
+            /* Initially hidden */
+            position: fixed;
+            background: #5a5a5a;
+            color: rgb(0, 0, 0);
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            max-width: 400px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 10px rgb(255, 255, 255);
+        }
+
+        .close:hover {
+            background-color: #bdbdff;
+            color: #2b2b47;
+        }
+
+        .close {
+            background-color: #2b2b47;
+            color: white;
+            padding: 4px 4px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .contact-box a {
+            color: white;
+            /* Cambia el color a blanco */
+            text-decoration: none;
+            /* Elimina el subrayado */
+            text-align: left;
+        }
+
+        .boton:hover {
+            background-color: #2c2c48;
+            color: #0A0A3D;
+        }
+
+
+        .container2 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .training-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: relative;
+            /* To contain the arrow */
+            overflow: hidden;
+            /* To round corners properly */
+            text-align: left;
+             background-size: cover;
+            /* Make the background image cover the entire container */
+            background-position: center;
+            /* Center the background image */
+            color: white;
+            /* Adjust the text color */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .training-item:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Darken on hover */
+}
+
+        .training-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .training-item a {
+            display: block;
+            color: white;
+            /* Text color to white for readability */
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for better visibility */
+        }
+
+        
+
+        .training-item::after {
+            content: "→";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: white;
+            /* Adjust to white for better visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow */
+        }
+
+        .membership-tiers {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .membership-tier {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .membership-tier:last-child {
+            border-bottom: none;
+        }
+
+        .membership-tier-name {
+            font-weight: bold;
+        }
+
+        .membership-tier-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .star {
+            font-size: 1.5em;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        /* Button Styles */
+        .membership-tier-details button {
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            outline: none;
+        }
+
+        /* Description Text */
+        .description-text {
+            display: none;
+            /* Hidden by default */
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .membership-tier-details button.active+.description-text {
+            display: block;
+            /* Show the description */
+        }
+
+        /* Plus sign button on hover */
+        .membership-tier-details button:hover {
+            color: #111;
             transform: scale(1.1);
         }
 
-        nav a:hover::after {
-            width: 100%;
+        .temple-section {
+            background-color: #111;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        .active {
-            color: #000000;
+        .temple-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: white;
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .temple-section p {
+            font-size: 1.2em;
+            color: #ddd;
+            margin-bottom: 30px;
         }
 
-        .dropbtn {
-            cursor: pointer;
+        .temple-section .button {
+            background-color: white;
+            color: #111;
+            padding: 15px 30px;
+            font-size: 1.2em;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            min-width: 200px;
-            z-index: 1000;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .dropdown-content a {
-            color: #373737;
-            padding: 10px 15px;
-            display: block;
-            transition: background 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .location {
-                border-right: none;
-                border-bottom: 1px solid rgb(255, 255, 255);
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-            }
-
-            .location:last-child {
-                border-bottom: none;
-            }
-
-        }
-
-
-
-        summary {
-            color: rgb(255, 255, 255);
-            padding: 8px 12px;
-
-            cursor: pointer;
-            display: inline-block;
-            transition: background 0.3s ease;
+        .temple-section .button:hover {
+            background-color: #eee;
         }
     </style>
 </head>
-<header>
-    <nav class="navbar">
-        <a href="home.html">Inicio</a>
-
-        <div class="dropdown">
-            <a href="servicios.html" class="dropbtn">Servicios ▼</a>
-            <div class="dropdown-content">
-                <a href="servicios.html#entrenamientos">Entrenamientos en circuito</a>
-                <a href="servicios.html#asistencia">Asistencia mecánica</a>
-
-                <a href="servicios.html#alojamiento">Alojamiento</a>
-                <a href="servicios.html#fisioterapia">Fisioterapia</a>
-                <a href="servicios.html#NUTRICIÓN">Nutrición deportiva</a>
-                <a href="servicios.html#PSICÓLOGO">Psicología deportivo</a>
-                <a href="servicios.html#diseñadora">Diseño gráfico</a>
-                <a href="servicios.html#community">Community manager</a>
-                <a href="servicios.html#asesoramiento juridico">Asesoramiento jurídico</a>
-            </div>
-        </div>
-        <a href="equipo.html">Equipo</a>
-        <a href="pilotos.html" class="active"> PILOTOS</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-</header>
 
 <body>
 
     <div class="container">
-       
-            <div class="location">
-            <h2>Carlos Pérez</h2>
-            <a>______________________________</a>
-            <p>MÉCANICO<br>ENTRENADOR<br>NUTRICIONISTA</p>
-            <a>______________________________</a>
-            <p><a href="tel:+34686731546">+34 686 73 15 46</a> <br>
-                <a href="mailto:dacorsa.competizione@gmail.com">dacorsa.competizione@gmail.com</a><br>
-                <a href="https://www.instagram.com/dacorsa.competizione/" class="more">@dacorsa.competizione</a>
-            </p>
+    
+        <h1>DACORSA COMPETIZIONE</h1>
 
-            <details>
-                <summary>
-                    <h4>Saber más ></h4>
-                </summary>
-                <a>Soy Carlos Pérez, apasionado del mundo del motociclismo y el alto rendimiento. Como
-                    mecánico de carreras especializado en motos, entrenador personal para riders y
-                    nutricionista, mi misión es optimizar tanto el rendimiento de las motos como el de los
-                    pilotos.
-                    Mi objetivo es llevar a cada piloto al siguiente nivel, combinando mecánica, preparación
-                    física y nutrición en un enfoque integral. Si buscas optimizar tu rendimiento, aquí
-                    encontrarás la experiencia y el conocimiento necesarios.
-                    <br>
-                    ¡Nos vemos en la pista!
-                </a>
-            </details>
-        </div>
-        <div class="location">
-            <h2>Enrique Matres</h2>
-            <a>______________________________</a>
-            <p>FISIOTERAPEUTA</p>
-            <p><a href="tel:+34605311464">+34 605 31 14 64</a><br>
-                <a>______________________________</a>
-                <a href="mailto:egarciamatres@hotmail.com">egarciamatres@hotmail.com</a><br>
-                <a href="https://www.instagram.com/360riderscenter/" class="more">@fisioterapeuta</a>
-            </p>
-            <details>
-                <summary>
-                    <h4>Saber más ></h4>
-                </summary>
-                <a>Soy Enrique Matres, fisioterapeuta especializado en alto rendimiento. Mi pasión es
-                    ayudar a deportistas de élite a alcanzar su máximo potencial físico a través de un enfoque
-                    integral y personalizado, no solo para la rehabilitación, sino también para la prevención de
-                    lesiones y la optimización del rendimiento.
-                    Si eres un deportista de alto rendimiento y buscas optimizar tu físico para alcanzar tus
-                    metas, estaré encantado de acompañarte en este camino hacia el éxito.
-                    <br>
-                    ¡Nos vemos en tu preparación!
-                </a>
-            </details>
-        </div>
-        <div class="location">
-            <h2>Javier Calduch</h2>
-            <a>______________________________</a>
-            <p>PSICÓLOGO</p>
-            <a>______________________________</a>
-            <p><a href="tel:+34610014654">+34 610 01 46 54</a><br>
-                <a href="mailto:jcalduchrochina@gmail.com">jcalduchrochina@gmail.com</a><br>
-                <a href="https://www.instagram.com/javiercalduch_psico/" class="more">@fisioterapeuta</a>
-            </p>
-              <details>
-            <summary>
-                <h4>Saber más ></h4>
-            </summary>
-            <a>Soy José Donate, psicólogo especializado en el alto rendimiento. Mi pasión es
-                acompañar a personas que buscan superar sus límites y alcanzar su máximo potencial, La mente
-                es tan clave como el cuerpo para lograr el éxito, y
-                mi enfoque se basa en desarrollar estrategias mentales que optimicen el rendimiento y
-                mejoren el bienestar general.
-                Si estás buscando un enfoque integral, aquí encontrarás el apoyo y la
-                orientación que necesitas.
-                <br>
-                ¡Vamos a trabajar juntos para llevar tu rendimiento a nuevas alturas!
-            </a>
-            </details>
-        </div>
-        <div class="location">
-            <h2>Sandra Meseguer</h2>
-            <a>______________________________</a>
-            <p>COMMUNITY MANAGER<br>DISEÑADORA GRÁFICA</p>
-            <a>______________________________</a>
-            <p><a href="tel:+34611404718">+34 611 40 47 18</a><br>
-                <a href="mailto:sboilsmeseguer@gmail.com">sboilsmeseguer@gmail.com</a><br>
-                <a href="https://www.instagram.com/sboils_/" class="more">@sboils_</a>
-            </p>
-            <details>
-                <summary>
-                    <h4>Saber más ></h4>
-                </summary>
-                <a> Soy Sandra Meseguer, diseñadora gráfica y community manager. Mi misión es ayudar a
-                    marcas y empresas a destacar
-                    a través de un diseño visual impactante y una gestión efectiva de sus redes sociales.
-                    Mi enfoque es construir y mantener una comunidad activa y
-                    comprometida en las plataformas sociales, Crear estrategias de contenido que no
-                    solo aumenten la visibilidad, sino que también generen una interacción auténtica con los
-                    seguidores.
-                    Puedo ayudarte a llevar tu proyecto al siguiente nivel.
-                    <br>
-                    ¡Hablemos y hagamos que tu marca brille!
-                </a>
-            </details>
-        </div>
-        <div class="location">
-            <h2>Ruben Bellido</h2>
-            <a>______________________________</a>
-            <p>ABOGADO</p>
-            <a>______________________________</a>
-            <p><a href="tel:+34667055011">+34 667 055 011</a><br>
-                <a href="mailto:Info@rubenbellidoabogado.com">Info@rubenbellidoabogado.com</a><br>
-                <a href="https://www.instagram.com/rubenbellidoabogado/" class="more">@rubenbellidoabogado</a>
-            </p>
-            <details>
-                <summary>
-                    <h4>Saber más ></h4>
-                </summary>
-                <a> Soy Rubén Bellido, CEO del bufete de abogados "Rubén Bellido y Asociados".
-                    Apasionado de las leyes y del motociclismo, me incorporo al equipo para ayudar a los pilotos y personal tanto a defender
-                    sus intereses como a tener un asesoramiento jurídico adecuado. El bufete, gestionará todos los temas burocráticos,
-                    brindaremos asesoramiento legal integral, gestionaremos contratos, protegeremos sus derechos de imagen y ostentaremos la
-                    representación en posibles reclamaciones judiciales. 
-                    <br>
-                    ¡Vamos a trabajar juntos!
-                </a>
-            </details>
-        </div>
-        <div class="location">
+        <div class="image-section">
+            <div class="rounded-image">
+                <img src="imgs/WhatsApp Image 2025-01-28 at 12.50.56.png" alt="Woman working out">
+               
+            
 
-            <h2>360 RIDERS CENTER</h2>
-            <a>______________________________</a>
-            <p>ACADEMIA<br></p>
-            <a>______________________________</a>
-            <p><a href="tel:+34686731546">+34 686 73 15 46</a> <br>
-                <a href="mailto:360riderscenter@gmail.com">360riderscenter@gmail.com</a><br>
-                <a href="https://www.instagram.com/360riderscenter/" class="more">@360riderscenter</a>
-                
-            </p>
-        </div>
-      
+        <h2>  un titul </h2>
+        <p>
+          
+          posar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
+          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
+          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
+          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
+          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnf
+           </p>
+
+        <!-- Button trigger for Contact Box -->
+        <button class="boton-contactButton" onclick="openContactBox()">Contacto</button>
 
     </div>
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="img/negamidf_adelanto-cheste_2025-01-28_0903/267_028_67/267_CHT274003802.MP4" video/mp4">
 
-        </video>
-        <div class="overlay"></div>
+    <div class="container2">
+
+        <section id="trainings">
+            <h2>SERVICIOS</h2>
+            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.53.20.png');">
+                <a href="#">ENTRENAMIENTOS EN CIRCUITO</a>
+            
+            </div>
+            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.53.24.png');">
+                <a href="#">ASISTENCIA MECÁNICA</a>
+           
+     
+            </div>
+            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.52.18.png');">
+                <a href="#">NS TU DIRÁS</a>
+            </div>
+        </section>
+
+        <section id="the-club">
+            <h2>PRECIOS</h2>
+            <div class="membership-tiers">
+                <div class="membership-tier">
+                    <span class="membership-tier-name">BASIC</span>
+                    <div class="membership-tier-details">
+                        <button class="plus-button">+</button>
+                        <p class="description-text">DÍA COMPLETO 120€ <Br>(De 8:00h a 14:00h y de 15:00h a 17:00h hora)</Br></p>
+
+                    </div>
+                </div>
+                <div class="membership-tier">
+                    <span class="membership-tier-name">MEDIO</span>
+                    <div class="membership-tier-details">
+                        <button class="plus-button">+</button>
+                        <p class="description-text">MEDIO DÍA 60€ <Br>(De 8:00h a 14:00h y de 15:00h a 17:00h hora)</Br></p>
+                    </div>
+                </div>
+                <div class="membership-tier">
+                    <span class="membership-tier-name">MENSUAL</span>
+                    <div class="membership-tier-details">
+                        <button class="plus-button">+</button>
+                        <p class="description-text">MENSUAL 400€ <Br>(4 días de entrenamineot/ semana + 1 día de mantenimiento de motos)</Br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="temple-section">
+        <h2>FOOTER</h2>
+        <p>ASO SERA EL FOOTER EN COSES DE SPONSORSP CONTACTL....</p>
+        <a href="#" class="button">JOIN TODAY</a>
+    </section>
+
+    <!-- Contact Box with close button - Displayed by the button -->
+    <div id="contactBox" class="contact-box">
+        <h2>CONTACTO</h2>
+        <p><strong>Tlf:</strong> <a href="tel:+34 667055011">+34 667055011</a></p>
+        <p><strong>Email:</strong> <a
+                href="mailto:dacorsa.competizione@gmail.com">dacorsa.competizione@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dacorsa.competizione/"
+                target="_blank">@dacorsa.competizione</a></p>
+        <button class="close" onclick="closeContactBox()">x</button>
+    </div>
+
+    <script>
+        // Function to open the contact box
+        function openContactBox() {
+            document.getElementById('contactBox').style.display = 'block';
+        }
+
+        // Function to close the contact box
+        function closeContactBox() {
+            document.getElementById('contactBox').style.display = 'none';
+        }
+        // Attach event listener to the document
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.plus-button').forEach(function (button) {
+                // Toggle the active class on the button
+                button.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    console.log('Button clicked!');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
-

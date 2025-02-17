@@ -565,3 +565,18 @@ body {
         justify-content: center;
     }
   }
+
+  .language-selector {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.language-selector select {
+    padding: 5px;
+    background-color: #0b0148;
+    border: 1px solid #000c58;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #ffffff;
+}
