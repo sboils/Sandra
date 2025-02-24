@@ -1,459 +1,727 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+<!DOCTYPE html> 
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dacorsa competizione</title>
-    <link rel="icon" href="img/LOGOS/arriba/favicon_io/apple-touch-icon.png" type="image/png">
+    <title>Entrenamientos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+         .sponsors {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .sponsors img {
+    height: 40px;
+  }
+        /* Contenedor azul con enlaces y logos */
+  .footer-main {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    text-align: left;
+  }
+  
+  .footer-links {
+    width: 30%;
+  }
+  
+  .footer-links h4,
+  .social-media h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #F1F1F1;
+  }
+  
+  /* Logos a la derecha */
+  .footer-logo {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    height: 50px;
+    margin: 5px;
+  }
+  
+  /* Redes sociales */
+  .social-media {
+    width: 30%;
+    text-align: right;
+  }
+  
+  .social-media .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  
+  .social-media .icons a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-media .icons a:hover {
+    color: #F1F1F1;
+  }
+  
+  /* Pie de página */
+  .footer-bottom {
+    background-color:#000000;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+  }
+        /*  General Styles */
         body {
             font-family: sans-serif;
-            /* Choose a suitable font */
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            text-align: left;
-            /* Center the content */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            /* Center the container */
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            letter-spacing: -0.05em;
-            color: #111;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #111;
-        }
-
-        p {
-            font-size: 1em;
-            color: #444;
-        }
-
-        .image-section {
-            margin-bottom: 30px;
-        }
-
-        .rounded-image {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            /* Needed for positioning the text overlay */
-        }
-
-        .rounded-image img {
-            width: 100%;
-            display: block;
-        }
-
-        .image-overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-        }
-
-        .small-text {
-            font-size: 0.8em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .star {
-            font-size: 2em;
-            margin: 20px 0;
-            color: #111;
-        }
-
-        .boton-contactButton {
-            display: inline-block;
-            padding: 12px 24px;
+            color: #fff;
             background-color: #111;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
+        }
+
+        h1, h2, h3 {
             font-weight: bold;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            /* Indicate that is a pointer */
-        }
-
-        .button:hover {
-            background-color: #333;
-        }
-
-        /* Adjustments for smaller screens */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.8em;
-            }
-
-            .image-overlay-text {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 0.9em;
-            }
-
-            .container {
-                padding: 10px;
-            }
-        }
-
-        .contact-box {
-            display: none;
-            /* Initially hidden */
-            position: fixed;
-            background: #5a5a5a;
-            color: rgb(0, 0, 0);
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            top: 50%;
-            left: 50%;
-            max-width: 400px;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 4px 10px rgb(255, 255, 255);
-        }
-
-        .close:hover {
-            background-color: #bdbdff;
-            color: #2b2b47;
-        }
-
-        .close {
-            background-color: #2b2b47;
-            color: white;
-            padding: 4px 4px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .contact-box a {
-            color: white;
-            /* Cambia el color a blanco */
-            text-decoration: none;
-            /* Elimina el subrayado */
-            text-align: left;
-        }
-
-        .boton:hover {
-            background-color: #2c2c48;
-            color: #0A0A3D;
-        }
-
-
-        .container2 {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        h3 {
-            font-size: 1.5em;
+            text-align: center;
             margin-bottom: 10px;
-            text-align: left;
         }
 
-        .training-item {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        .hero {
             position: relative;
-            /* To contain the arrow */
-            overflow: hidden;
-            /* To round corners properly */
-            text-align: left;
-             background-size: cover;
-            /* Make the background image cover the entire container */
-            background-position: center;
-            /* Center the background image */
-            color: white;
-            /* Adjust the text color */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-
-        .training-item:hover {
-    background-color: rgba(0, 0, 0, 0.6); /* Darken on hover */
-}
-
-        .training-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .training-item a {
-            display: block;
-            color: white;
-            /* Text color to white for readability */
-            text-decoration: none;
-            padding: 10px;
-            transition: background-color 0.3s ease;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for better visibility */
-        }
-
-        
-
-        .training-item::after {
-            content: "→";
-            position: absolute;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            font-size: 1.5em;
-            color: white;
-            /* Adjust to white for better visibility */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow */
-        }
-
-        .membership-tiers {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .membership-tier {
+            height: 100vh;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .membership-tier:last-child {
-            border-bottom: none;
-        }
-
-        .membership-tier-name {
-            font-weight: bold;
-        }
-
-        .membership-tier-details {
-            display: flex;
-            align-items: center;
-        }
-
-        .star {
-            font-size: 1.5em;
-            color: #333;
-            margin-right: 10px;
-        }
-
-        /* Button Styles */
-        .membership-tier-details button {
-            background: none;
-            border: none;
-            color: #333;
-            font-size: 1.5em;
-            cursor: pointer;
-            padding: 0;
-            margin: 0;
-            outline: none;
-        }
-
-        /* Description Text */
-        .description-text {
-            display: none;
-            /* Hidden by default */
-            margin-top: 5px;
-            font-size: 0.8em;
-            color: #777;
-        }
-
-        .membership-tier-details button.active+.description-text {
-            display: block;
-            /* Show the description */
-        }
-
-        /* Plus sign button on hover */
-        .membership-tier-details button:hover {
-            color: #111;
-            transform: scale(1.1);
-        }
-
-        .temple-section {
-            background-color: #111;
-            color: white;
-            padding: 40px 20px;
             text-align: center;
         }
 
-        .temple-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: white;
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
-        .temple-section p {
-            font-size: 1.2em;
+        .hero-content h1 {
+            font-size: 4em;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .services, .photos {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-box {
+            width: 300px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-me {
+            position: relative;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-me-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .about-me-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 50px 20px;
+            background-image: url(imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.50.56.png); /* Asegúrate de tener esta imagen */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 300px;
+            color: #000;
+        }
+
+        .contact-box i {
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .contact-box a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+            color: #545454;
+        }
+
+        p {
+            text-align: left;
+            line-height: 1.6;
             color: #ddd;
-            margin-bottom: 30px;
         }
 
-        .temple-section .button {
-            background-color: white;
-            color: #111;
-            padding: 15px 30px;
-            font-size: 1.2em;
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+            margin: 10px auto;
         }
 
-        .temple-section .button:hover {
-            background-color: #eee;
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 5px;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5em;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Services Section */
+        .services {
+          
+            .services {
+    background-image: url(entrenes/fondo/Captura\ de\ pantalla\ 2025-02-24\ 203944.png); /* Cambia 'ruta-de-tu-imagen/fondo.jpg' por la ubicación real */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px; /* Ajusta el espacio interno */
+    color: white; /* Asegura que el texto sea legible */
+    text-align: center;
+}
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+          
+        }
+
+        .service-box {
+            width: 300px;
+            padding: 20px;
+            background-image: url(entrenes/fondo/Captura\ de\ pantalla\ 2025-02-24\ 203944.png); /* Cambia 'ruta-de-tu-imagen/fondo.jpg' por la ubicación real */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+
+        .service-box i {
+            text-align: center;
+            display: block;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        /* Photos Section */
+        .photos {
+            padding: 50px 20px;
+            background-image: url(entrenes/fondo/Captura\ de\ pantalla\ 2025-02-24\ 203944.png); /* Cambia 'ruta-de-tu-imagen/fondo.jpg' por la ubicación real */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* About Me Section */
+        .about-me {
+            position: relative;
+            padding: 50px 20px;
+            overflow: hidden;
+        }
+
+        .about-me-bg {
+            position: absolute;
+            top: 10;
+            left: 10;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.3;
+            /* Adjust for desired darkness */
+        }
+
+        .about-me-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Add a semi-transparent background */
+            border-radius: 5px;
+        }
+
+          
+        .box {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 300px;
+        }
+        
+        .icon {
+            font-size: 24px;
+            color: #000000;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+        }
+        a:hover{
+            text-decoration:underline;
+            color:#3d3d3d;
+
+         
+        }
+   
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6e6e6e;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 15PX;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: #cb1111;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #670a0a;
+            transform: scale(1.1);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .active {
+            color: #000000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1000;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #373737;
+            padding: 10px 15px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+/* Redes sociales */
+.social-media {
+  width: 30%;
+  text-align: right;
+}
+
+.social-media .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.social-media .icons a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-media .icons a:hover {
+  color: #F1F1F1;
+}
+.container {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 300px;
+        }
+
+/* Pie de página */
+
+
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-    
-        <h1>DACORSA COMPETIZIONE</h1>
-
-        <div class="image-section">
-            <div class="rounded-image">
-                <img src="imgs/WhatsApp Image 2025-01-28 at 12.50.56.png" alt="Woman working out">
-               
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" >Inicio</a>
             
+            <div class="dropdown">
+                <a href="servicios.html" class="dropbtn" class="active">SERVICIOS ▼</a>
+                <div class="dropdown-content">
+                  <a href="servicios.html#carlosentrenes" >Entrenamientos en circuito</a>
+                  <a href="servicios.html#asistencia" >Asistencia mecánica</a>
+                  
+                  <a href="servicios.html#alojamiento" >Alojamiento</a>
+                  <a href="servicios.html#fisioterapia">Fisioterapia</a>
+                  <a href="servicios.html#NUTRICIÓN" >Nutrición deportiva</a>
+                  <a href="servicios.html#PSICÓLOGO" >Psicología deportivo</a>
+                  <a href="servicios.html#diseñadora">Diseño gráfico</a>
+                  <a href="servicios.html#community">Community manager</a>
+                  <a href="servicios.html#asesoramiento juridico">Asesoramiento jurídico</a>
+                </div>
+            </div>
+            <a href="equipo.html">Equipo</a>
+            <a href="pilotos.html" > Pilotos</a>
+            <a href="contacto.html"> Contacto</a>
+        </nav>
+    </header>
 
-        <h2>  un titul </h2>
-        <p>
-          
-          posar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
-          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
-          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
-          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnfposar un texto o algo ns sjdhbgvsdhjbvhjsfbvn jdn bvdkfmb ñfdzb
-          bdkjñf bvdknz fbñzd nbdfkn bdnñ bñdnb ngdf bkdnf
-           </p>
-
-        <!-- Button trigger for Contact Box -->
-        <button class="boton-contactButton" onclick="openContactBox()">Contacto</button>
-
+   <!-- Hero Section -->
+   <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="entrenes/Video entrenamientos largo.mp4"video/mp4">
+       
+    </video>
+    <div class="hero-content">
+        <img src="entrenes/logo/dacorsa.png" alt="DACORSA Logo" class="hero-logo">
+       
+        <div class="social-icons">
+            <a href="https://wa.me/34686731546"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/dacorsa.competizione/"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
+</section>
 
-    <div class="container2">
-
-        <section id="trainings">
-            <h2>SERVICIOS</h2>
-            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.53.20.png');">
-                <a href="#">ENTRENAMIENTOS EN CIRCUITO</a>
-            
+    <!-- Services Section -->
+    <section class="services">
+        <h2>SERVICIOS</h2>
+        <div class="divider"></div>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fas fa-chevron-down fa-3x"></i>
+                <h3>ENTRENAMIENTOS EN CIRCUITO</h3>
+                <p>Nuestros entrenamientos personalizados están diseñados para llevarte al siguiente nivel. Adaptamos
+                    cada sesión a tus necesidades.</p>
             </div>
-            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.53.24.png');">
-                <a href="#">ASISTENCIA MECÁNICA</a>
-           
-     
+            <div class="service-box">
+                <i class="fas fa-chevron-down fa-3x"></i>
+                <h3>ASISTENCIA MECÁNICA</h3>
+                <p>En el mundo de la competición, cada segundo cuenta. Nuestro servicio de asistencia mecánica garantiza
+                    que tu moto rinda al máximo.</p>
             </div>
-            <div class="training-item" style="background-image: url('imgs/WhatsApp\ Image\ 2025-01-28\ at\ 12.52.18.png');">
-                <a href="#">NS TU DIRÁS</a>
-            </div>
-        </section>
-
-        <section id="the-club">
-            <h2>PRECIOS</h2>
-            <div class="membership-tiers">
-                <div class="membership-tier">
-                    <span class="membership-tier-name">BASIC</span>
-                    <div class="membership-tier-details">
-                        <button class="plus-button">+</button>
-                        <p class="description-text">DÍA COMPLETO 120€ <Br>(De 8:00h a 14:00h y de 15:00h a 17:00h hora)</Br></p>
-
-                    </div>
-                </div>
-                <div class="membership-tier">
-                    <span class="membership-tier-name">MEDIO</span>
-                    <div class="membership-tier-details">
-                        <button class="plus-button">+</button>
-                        <p class="description-text">MEDIO DÍA 60€ <Br>(De 8:00h a 14:00h y de 15:00h a 17:00h hora)</Br></p>
-                    </div>
-                </div>
-                <div class="membership-tier">
-                    <span class="membership-tier-name">MENSUAL</span>
-                    <div class="membership-tier-details">
-                        <button class="plus-button">+</button>
-                        <p class="description-text">MENSUAL 400€ <Br>(4 días de entrenamineot/ semana + 1 día de mantenimiento de motos)</Br></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <section class="temple-section">
-        <h2>FOOTER</h2>
-        <p>ASO SERA EL FOOTER EN COSES DE SPONSORSP CONTACTL....</p>
-        <a href="#" class="button">JOIN TODAY</a>
+        </div>
     </section>
 
-    <!-- Contact Box with close button - Displayed by the button -->
-    <div id="contactBox" class="contact-box">
-        <h2>CONTACTO</h2>
-        <p><strong>Tlf:</strong> <a href="tel:+34 667055011">+34 667055011</a></p>
-        <p><strong>Email:</strong> <a
-                href="mailto:dacorsa.competizione@gmail.com">dacorsa.competizione@gmail.com</a></p>
-        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dacorsa.competizione/"
-                target="_blank">@dacorsa.competizione</a></p>
-        <button class="close" onclick="closeContactBox()">x</button>
-    </div>
+    <!-- Photos Section -->
+    <section class="photos">
+        <h2>FOTOS</h2>
+        <div class="divider"></div>
+        <div class="photo-grid">
+            <img src="imgs/NEW/Carlos Moto2.png" alt="Photo 1">
+            <img src="imgs/WhatsApp Image 2025-01-28 at 12.50.56.png" alt="Photo 2">
+            <img src="imgs/WhatsApp Image 2025-01-28 at 12.52.18.png" alt="Photo 3">
+            <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.20.png" alt="Photo 4">
+            <img src="imgs/WhatsApp Image 2025-01-28 at 12.53.30.png" alt="Photo 5">
+            <img src="imgs/NEW/MU89 CO67 Cheste 3.png" alt="Photo 6">
+        </div>
+    </section>
 
-    <script>
-        // Function to open the contact box
-        function openContactBox() {
-            document.getElementById('contactBox').style.display = 'block';
-        }
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-me-content">
+            <Br></Br>
+            <h1>CONTACTO</h1>
+            <div class="divider"></div>
+            <br>
+            <div class="contact-box">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+34686731546">686 73 15 46</a>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:dacorsacompetizione@gmail.com">dacorsacompetizione@gmail.com</a>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/dacorsa.competizione/">@dacorsa.competizione</a>
+            </div>
+            <Br>
+                <Br>
+                   
+            <h2>SOBRE MI</h2>
+            
+            <div class="divider"></div>
+           
+            <p>
+                <br>
+                Soy Carlos, un mecánico especializado en motos de carreras, con experiencia en MotoGP y entrenamientos de alto
+                rendimiento. Mi pasión por la mecánica y la velocidad me ha llevado a trabajar en el mundo del
+                motociclismo de competición, donde la precisión y la eficiencia son clave.
+<br>
+<br>
+                 <br>
+                Mi objetivo es optimizar el rendimiento de cada moto, asegurando que cada ajuste y modificación brinde
+                la máxima potencia, estabilidad y fiabilidad en pista. Busco perfeccionar cada detalle técnico para que
+                el piloto pueda exprimir al máximo su potencial y mejorar tiempos en cada vuelta. Además, quiero seguir
+                aprendiendo e innovando en el sector, aplicando las últimas tecnologías y estrategias en el mundo del
+                motor.</p>
+                <Br></Br>
 
-        // Function to close the contact box
-        function closeContactBox() {
-            document.getElementById('contactBox').style.display = 'none';
-        }
-        // Attach event listener to the document
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.plus-button').forEach(function (button) {
-                // Toggle the active class on the button
-                button.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                    console.log('Button clicked!');
-                });
-            });
-        });
-    </script>
+              
+        </div>
+        <img src="imgs/WhatsApp Image 2025-01-28 at 12.52.18.png" alt="About Me Background" class="about-me-bg">
+    </section>
+     
+    <footer>
+        <!-- Sección de Sponsors -->
+        <div class="sponsors">
+            <img src="img/LOGOS/SBOILS.png" alt="sponsor">
+            <img src="img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="sponsor">
+            <img src="img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="sponsor">
+            <img src="img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="sponsor">
+            <img src="img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="sponsor">
+        </div>
+
+        <!-- Sección azul con información -->
+        <div class="footer-main">
+            <div class="footer-links">
+                <h4>INFORMACIÓN</h4>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-logo">
+               
+              
+
+            </div>
+            <div class="social-media">
+                <div class="icons">
+                    <a href="https://www.instagram.com/dacorsa.competizione/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Teléfono -->
+                    <a href="tel:+34686731546">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <!-- Correo electrónico -->
+                    <a href="mailto:dacorsacompetizione@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            
+    </footer>
 </body>
 
 </html>
