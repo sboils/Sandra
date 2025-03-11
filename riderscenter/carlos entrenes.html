@@ -552,6 +552,152 @@
 /* Pie de página */
 
 
+@media (max-width: 767px) {
+    .hero {
+        height: auto; /* Adjust hero height for smaller screens */
+        padding: 50px 0;
+    }
+    .hero-logo {
+        max-width: 580px; /* Slightly larger on tablets */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .services-container {
+        flex-direction: column; /* Stack service boxes on smaller screens */
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%; /* Make service boxes wider on smaller screens */
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr; /* Single column for photos on mobile */
+    }
+
+    .about-me-content {
+        padding: 30px;
+    }
+
+    /* Footer adjustments */
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-logo,
+    .social-media {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .social-media .icons {
+        justify-content: center; /* Center social media icons on mobile */
+    }
+
+    .about-me {
+        flex-direction: column; /* Stack content vertically */
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+        gap: 10px; /* Reduce gap between elements */
+    }
+
+    .about-me-content {
+        max-width: 100%; /* Make content take full width */
+        padding: 20px; /* Reduce padding inside the content box */
+        border-radius: 5px; /* Slightly smaller rounded corners */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .contact-box i {
+        font-size: 20px; /* Smaller icons for mobile devices */
+    }
+
+    .contact-box a {
+        font-size: 14px; /* Smaller text size for mobile devices */
+        word-wrap: break-word; /* Ensure long text wraps properly on small screens */
+    }
+
+    .about-me-bg {
+        opacity: 0.5; /* Make background image slightly more visible on mobile devices */
+    }
+
+    .divider {
+        width: 40px; /* Slightly smaller divider on mobile devices */
+        margin-bottom: 15px; /* Add space below divider */
+    }
+}
+
+
+
+
+/* Tablet Devices (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-logo {
+        max-width: 580px; /* Slightly larger on tablets */
+    }
+
+    .services-container {
+        justify-content: space-around;
+    }
+
+    .service-box {
+        width: 45%; /* Two service boxes per row on tablets */
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for photos on tablets */
+    }
+
+    .footer-main {
+        padding: 20px;
+    }
+
+    .about-me-content {
+        max-width: 600px; /* Adjust width for tablets */
+        padding: 30px; /* Adjust padding for tablets */
+        font-size: 16px; /* Slightly larger font size for tablets */
+    }
+
+    .contact-box i {
+        font-size: 22px; /* Adjust icon size for tablets */
+    }
+
+    .contact-box a {
+        font-size: 15px; /* Adjust text size for tablets */
+    }
+}
+
+/* Desktop Devices (992px and up) */
+@media (min-width: 992px) {
+    .about-me-content {
+        max-width: 800px; /* Default width for larger screens */
+        padding: 40px; /* Default padding for larger screens */
+        font-size: 18px; /* Default font size for larger screens */
+    }
+
+    .contact-box i {
+        font-size: 24px; /* Default icon size for larger screens */
+    }
+
+    .contact-box a {
+        font-size: 16px; /* Default text size for larger screens */
+    }
+
+  
+}
+
     </style>
 </head>
 
@@ -725,3 +871,5 @@
 </body>
 
 </html>
+
+
