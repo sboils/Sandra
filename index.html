@@ -4,25 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360º Riders Center</title>
-
-    <!-- Fuentes -->
+    <title>360 riderscenter</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome (para iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Script de Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="riderscenter/img/LOGOS/arriba/favicon_io/apple-touch-icon.png" type="image/png">
-
-
-
-
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
         body {
@@ -223,7 +210,7 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-
+      
 
         .cookie-consent {
             position: fixed;
@@ -276,6 +263,7 @@
             position: absolute;
             right: 20px;
             top: 15px;
+            background-color: #ebedee;
         }
 
         /* Ocultar menú por defecto en móviles */
@@ -340,111 +328,186 @@
             /* Banner adjustments for mobile */
 
         }
+        
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0A0A3D;
+  color: white;
+}
 
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0A0A3D;
-            color: white;
-        }
+/* Sección de Sponsors (Parte superior, fondo negro) */
+.sponsors {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-        /* Sección de Sponsors (Parte superior, fondo negro) */
-        .sponsors {
-            background-color: black;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
+.sponsors img {
+  height: 40px;
+}
 
-        .sponsors img {
-            height: 40px;
-        }
+/* Contenedor azul con enlaces y logos */
+.footer-main {
+  background-color: #0A0A3D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  text-align: left;
+}
 
-        /* Contenedor azul con enlaces y logos */
-        .footer-main {
-            background-color: #0A0A3D;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-            text-align: left;
-        }
+.footer-links {
+  width: 30%;
+}
 
-        .footer-links {
-            width: 30%;
-        }
+.footer-links h4,
+.social-media h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-        .footer-links h4,
-        .social-media h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
 
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-        }
+.footer-links ul li {
+  margin: 8px 0;
+}
 
-        .footer-links ul li {
-            margin: 8px 0;
-        }
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-        .footer-links ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
+.footer-links ul li a:hover {
+  color: #F1F1F1;
+}
 
-        .footer-links ul li a:hover {
-            color: #F1F1F1;
-        }
+/* Logos a la derecha */
+.footer-logo {
+  width: 30%;
+  text-align: center;
+}
 
-        /* Logos a la derecha */
-        .footer-logo {
-            width: 30%;
-            text-align: center;
-        }
+.footer-logo img {
+  height: 50px;
+  margin: 5px;
+}
 
-        .footer-logo img {
-            height: 50px;
-            margin: 5px;
-        }
+/* Redes sociales */
+.social-media {
+  width: 30%;
+  text-align: right;
+}
 
-        /* Redes sociales */
-        .social-media {
-            width: 30%;
-            text-align: right;
-        }
+.social-media .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
 
-        .social-media .icons {
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
-        }
+.social-media .icons a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
 
-        .social-media .icons a {
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-        }
+.social-media .icons a:hover {
+  color: #F1F1F1;
+}
 
-        .social-media .icons a:hover {
-            color: #F1F1F1;
-        }
+/* Pie de página */
+.footer-bottom {
+  background-color:#0A0A3D;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
 
-        /* Pie de página */
-        .footer-bottom {
-            background-color: #0A0A3D;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+            body {
+                padding-top: 50px;
+                /* Ajuste para el header fijo */
+            }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                /* Se muestra el botón de menú */
+                color: #000000;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: white;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 10px;
+                display: block;
+            }
+
+            /* Modificaciones para movil */
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            /* Banner adjustments for mobile */
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            .banner p {
+                font-size: 1.2rem;
+            }
+
+            /* Header adjustments for mobile */
+            header {
+                padding: 5px 0;
+            }
+
+            .navbar {
+                padding: 5px 0;
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
             .footer-main {
                 flex-direction: column;
                 text-align: center;
@@ -461,24 +524,158 @@
                 justify-content: center;
             }
         }
+
+        @media (max-width: 480px) {
+
+            .banner h1 {
+                font-size: 1.5rem;
+            }
+
+            .banner p {
+                font-size: 1rem;
+            }
+
+            header {
+                padding: 2px 0;
+            }
+
+            .menu-toggle {
+                font-size: 1.5rem;
+                top: 10px;
+                right: 10px;
+            }
+
+            .button-container {
+                gap: 5px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+       
+
+         @media (max-width: 320px) {
+    /* Adjustments for very small screens */
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner p {
+        font-size: 0.8rem;
+    }
+
+    /* Further adjustments for smaller buttons */
+    .button-container {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Further reduce button padding */
+        font-size: 0.7rem; /* Reduce font size even more */
+    }
+  /* Smaller logo for tiny screens */
+    .logo {
+      max-width: 70%; /* Adjust percentage */
+    }
+    /* Reduce gap even more */
+    header {
+        padding: 1px 0;
+    }
+
+    .navbar {
+        padding: 2px 0;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 1px 0;
+        font-size: 0.7rem;
+    }
+
+    /* Reduce gap even more */
+     .social-media .icons {
+      flex-direction: column;
+      align-items: center;
+        }
+
+            .social-media i {
+       flex-direction: column;
+      align-items: center;
+              font-size: 1rem;
+         }
+
+                .footer-links {
+              text-align: center;
+           }
+
+            .footer-logo {
+              text-align: center;
+             }
+}
+ /* Adjustments for very small screens */
+    body {
+        font-size: 0.9rem; /* Reduce base font size */
+    }
+
+    .banner h1 {
+        font-size: 2rem; /* Further reduce heading size */
+    }
+
+    .banner p {
+        font-size: 0.9rem; /* Further reduce paragraph size */
+    }
+
+    /* Further adjustments for smaller buttons */
+    .button-container {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .btn {
+        padding: 4px 8px; /* Further reduce button padding */
+        font-size: 0.5rem; /* Reduce font size even more */
+    }
+
+    /* Smaller logo for tiny screens */
+    .logo {
+        max-width: 60%; /* Adjust percentage */
+        height: auto;
+    }
+    /* Further reduce button padding */
+     .menu-toggle {
+     font-size: 1rem;
+            top: 5px;
+            right: 5px;
+
+     }
+            /* Further reduce button padding */
+       
+    
+           
+
     </style>
 </head>
 
 <body>
 
     <header>
-        
         <nav class="navbar">
             <div class="menu-toggle" onclick="toggleMenu()">
-                ☰
+            ☰
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="riderscenter/home.html" class="active">INICIO</a></li>
                 <li class="dropdown">
-                    <a href="riderscenter/servicios.html" class="dropbtn">Servicios ▼</a>
+                    <a href="riderscenter/riderscenter/servicios.html#entrenamientos" class="dropbtn">Servicios ▼</a>
                     <ul class="dropdown-content">
-                        <li><a href="riderscenter/riderscenter/servicios.html#entrenamientos">Entrenamientos en
-                                circuito</a></li>
+                        <li><a href="riderscenter/riderscenter/servicios.html#entrenamientos">Entrenamientos en circuito</a></li>
                         <li><a href="riderscenter/servicios.html#asistencia">Asistencia mecánica</a></li>
                         <li><a href="riderscenter/servicios.html#alojamiento">Alojamiento</a></li>
                         <li><a href="riderscenter/servicios.html#fisioterapia">Fisioterapia</a></li>
@@ -489,9 +686,9 @@
                         <li><a href="riderscenter/servicios.html#juridico">Asesoramiento jurídico</a></li>
                     </ul>
                 </li>
-                <li><a href="riderscenter/equipo.html">Equipo</a></li>
-                <li><a href="riderscenter/pilotos.html">Pilotos</a></li>
-                <li><a href="riderscenter/contacto.html">Contacto</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="pilotos.html">Pilotos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -500,18 +697,17 @@
         <video autoplay loop muted playsinline>
             <source src="riderscenter/imgs/CO67 Cheste.mp4" type="video/mp4">
         </video>
-        <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="360 Riders Center"
-            class="fade-in logo">
+        <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="360 Riders Center" class="fade-in logo">
 
         <div class="button-container">
-            <a href="riderscenter/servicios.html#entrenamientos" class="btn learn-more">Entrenamientos en circuito</a>
-            <a href="riderscenter/servicios.html#asistencia" class="btn learn-more">Asistencia mecánica</a>
+            <a href="riderscenter/carlos entrenes.html" class="btn learn-more">Entrenamientos en circuito</a>
+            <a href="riderscenter/carlos entrenes.html" class="btn learn-more">Asistencia mecánica</a>
             <a href="riderscenter/servicios.html#alojamiento" class="btn learn-more">Alojamiento</a>
         </div>
 
     </main>
     <footer>
-
+       
         <div id="cookie-consent" class="cookie-consent">
             <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestro uso de
                 cookies.</p>
@@ -519,56 +715,66 @@
             <a href="#" class="cookie-policy">Política de cookies</a>
         </div>
 
-
-
-        <!-- Sección de Sponsors -->
-        <div class="sponsors">
-            <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
-            <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
-            <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
-            <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
-            <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
-        </div>
-
-        <!-- Sección azul con información -->
-        <div class="footer-main">
-            <div class="footer-links">
-                <h4>INFORMACIÓN</h4>
-                <ul>
-                    <li><a href="riderscenter/contacto.html">Contacto</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Política de cookies</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-logo">
-                <img src="riderscenter/img/LOGOS/abogado.jpeg" alt="riders">
-                <img src="riderscenter/img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="abogado">
-                <img src="riderscenter/img/LOGOS/SBOILS.png" alt="sboils">
-                <img src="riderscenter/img/LOGOS/PSICO.png" alt="psicologo">
-
-            </div>
-            <div class="social-media">
-                <div class="icons">
-                    <a href="https://www.instagram.com/360riderscenter/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <!-- Teléfono -->
-                    <a href="tel:+34686731546">
-                        <i class="fas fa-phone icon"></i>
-                    </a>
-                    <!-- Correo electrónico -->
-                    <a href="mailto:360riderscenter@gmail.com">
-                        <i class="fas fa-envelope icon"></i>
-                    </a>
+        
+            <footer>
+                <!-- Sección de Sponsors -->
+                <div class="sponsors">
+                    <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
+                    <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
+                    <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
+                    <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
+                    <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="sponsor">
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 360º Riders Center. Todos los derechos reservados.</p>
-            </div>
-            
+        
+                <!-- Sección azul con información -->
+                <div class="footer-main">
+                    <div class="footer-links">
+                        <h4>INFORMACIÓN</h4>
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Política de cookies</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer-logo">
+                        <img src="riderscenter/img/LOGOS/RIDERS CENTER360 fima BLANCO.png" alt="riders">
+                        <img src="riderscenter/img/LOGOS/Captura de pantalla 2025-02-10 160940.png" alt="abogado">
+                        <img src="riderscenter/img/LOGOS/SBOILS.png" alt="sboils">
+                        <img src="riderscenter/img/LOGOS/PSICO.png" alt="psicologo">
+                       
+                    </div>
+        
+                    <div class="social-media">
+                     
+                        <div class="icons">
+                          
+                            <a href="https://www.instagram.com/360riderscenter/"><i class="fab fa-instagram"></i></a>
+                            <i class="fas fa-phone icon"></i> 
+                            <a href="tel:+34686731546"></a>
+                            <i class="fas fa-envelope icon"></i> 
+                            <a href="mailto:360riderscenter@gmail.com"></a>
+                          
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="footer-bottom">
+                    <p>&copy; 2025 360º Riders Center. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+        
+       
+        
+
+
+
+
+
+
+
+
     </footer>
 
     <script>

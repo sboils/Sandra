@@ -432,20 +432,236 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .footer-main {
+            body {
+                padding-top: 50px;
+                /* Ajuste para el header fijo */
+            }
+
+            .menu-toggle {
+                display: block;
+                /* Se muestra el botón de menú */
+                color: #000000;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: white;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 10px;
+                display: block;
+            }
+
+            /* Modificaciones para movil */
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            /* Banner adjustments for mobile */
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            .banner p {
+                font-size: 1.2rem;
+            }
+
+            /* Header adjustments for mobile */
+            header {
+                padding: 5px 0;
+            }
+
+            .navbar {
+                padding: 5px 0;
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .footer-links,
+            .footer-logo,
+            .social-media {
+                width: 100%;
+            }
+
+            .social-media .icons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .banner h1 {
+                font-size: 1.5rem;
+            }
+
+            .banner p {
+                font-size: 1rem;
+            }
+
+            header {
+                padding: 2px 0;
+            }
+
+            .menu-toggle {
+                font-size: 1.5rem;
+                top: 10px;
+                right: 10px;
+            }
+
+            .button-container {
+                gap: 5px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+       
+
+         @media (max-width: 320px) {
+    /* Adjustments for very small screens */
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner p {
+        font-size: 0.8rem;
+    }
+
+    /* Further adjustments for smaller buttons */
+    .button-container {
+        gap: 3px; /* Reduce gap further */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Further reduce button padding */
+        font-size: 0.7rem; /* Reduce font size even more */
+    }
+  /* Smaller logo for tiny screens */
+    .logo {
+      max-width: 70%; /* Adjust percentage */
+    }
+    /* Reduce gap even more */
+    header {
+        padding: 1px 0;
+    }
+
+    .navbar {
+        padding: 2px 0;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 1px 0;
+        font-size: 0.7rem;
+    }
+
+    /* Reduce gap even more */
+     .social-media .icons {
       flex-direction: column;
-      text-align: center;
-      gap: 20px;
-  }
+      align-items: center;
+        }
 
-  .footer-links, .footer-logo, .social-media {
-      width: 100%;
-  }
+            .social-media i {
+       flex-direction: column;
+      align-items: center;
+              font-size: 1rem;
+         }
 
-  .social-media .icons {
-      justify-content: center;
-  }
+                .footer-links {
+              text-align: center;
+           }
+
+            .footer-logo {
+              text-align: center;
+             }
 }
+ /* Adjustments for very small screens */
+    body {
+        font-size: 0.7rem; /* Reduce base font size */
+    }
+
+    .banner h1 {
+        font-size: 1rem; /* Further reduce heading size */
+    }
+
+    .banner p {
+        font-size: 0.7rem; /* Further reduce paragraph size */
+    }
+
+    /* Further adjustments for smaller buttons */
+    .button-container {
+        gap: 3px; /* Reduce gap further */
+    }
+
+    .btn {
+        padding: 4px 8px; /* Further reduce button padding */
+        font-size: 0.5rem; /* Reduce font size even more */
+    }
+
+    /* Smaller logo for tiny screens */
+    .logo {
+        max-width: 10%; /* Adjust percentage */
+        height: auto;
+    }
+    /* Further reduce button padding */
+     .menu-toggle {
+     font-size: 1rem;
+            top: 5px;
+            right: 5px;
+
+     }
+            /* Further reduce button padding */
+             .sponsors img {
+        width: 5%; /* adjust percentage */
+    }
+     .footer-logo img {
+        width: 5%; /* adjust percentage */
+    }
+           
 
     </style>
 </head>
@@ -460,7 +676,7 @@ body {
             <ul class="nav-links">
                 <li><a href="riderscenter/home.html" class="active">INICIO</a></li>
                 <li class="dropdown">
-                    <a href="riderscenter/servicios.html" class="dropbtn">Servicios ▼</a>
+                    <a href="riderscenter/riderscenter/servicios.html#entrenamientos" class="dropbtn">Servicios ▼</a>
                     <ul class="dropdown-content">
                         <li><a href="riderscenter/riderscenter/servicios.html#entrenamientos">Entrenamientos en circuito</a></li>
                         <li><a href="riderscenter/servicios.html#asistencia">Asistencia mecánica</a></li>
@@ -487,8 +703,8 @@ body {
         <img src="riderscenter/logos riders center/firma/RIDERS CENTER360 fima.png" alt="360 Riders Center" class="fade-in logo">
 
         <div class="button-container">
-            <a href="riderscenter/servicios.html#entrenamientos" class="btn learn-more">Entrenamientos en circuito</a>
-            <a href="riderscenter/servicios.html#asistencia" class="btn learn-more">Asistencia mecánica</a>
+            <a href="riderscenter/carlos entrenes.html" class="btn learn-more">Entrenamientos en circuito</a>
+            <a href="riderscenter/carlos entrenes.html" class="btn learn-more">Asistencia mecánica</a>
             <a href="riderscenter/servicios.html#alojamiento" class="btn learn-more">Alojamiento</a>
         </div>
 
